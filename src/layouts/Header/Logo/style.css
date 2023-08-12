@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
+.logo{
+    width: 20%;
+    height: 80px;
+    float: left;
+    background-color: white;
+}
+.logo-icon{
+    text-align: center;
+}
+
+.bread{
+    width: 45px;
+    height: 40px;
+    
+}
+
+.logo>.logo-icon>p{
+    margin: 0;
+    font-family: 'Sedgwick Ave Display', cursive;
+    font-size: 25px;
+    color: rgb(85,85,85);
+}
+

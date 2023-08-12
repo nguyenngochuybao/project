@@ -1,0 +1,143 @@
+{
+    "users": [],
+
+    "products": [
+        {
+            "id": 1,
+            "name": "BÁNH MÌ ỐP LA",
+            "price": 15000,
+            "image": "https://img-global.cpcdn.com/recipes/01914f4be6cc4786/680x482cq70/banh-mi-vi%E1%BB%87t-nam-k%E1%BA%B9p-tr%E1%BB%A9ng-%E1%BB%91p-la-recipe-main-photo.jpg",
+            "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aperiam provident incidunt earum sequi placeat doloremque, voluptas sunt hic. Vero architecto odit sapiente, sunt corrupti quod impedit nam minus ipsum.",
+            "quantity": 1
+        },
+
+        {
+            "id": 2,
+            "name": "BÁNH MÌ CHẢ CÁ",
+            "price": 16000,
+            "image": "https://xebanhmithonhiky.com.vn/wp-content/uploads/2022/03/thanh-pham.jpg",
+            "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aperiam provident incidunt earum sequi placeat doloremque, voluptas sunt hic. Vero architecto odit sapiente, sunt corrupti quod impedit nam minus ipsum.",
+            "quantity": 1
+        },
+        {
+            "id": 3,
+            "name": "BÁNH MÌ THỊT CHẢ",
+            "price": 16000,
+            "image": "https://yummyday.vn/uploads/images/banh-mi-cha-2.jpg",
+            "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aperiam provident incidunt earum sequi placeat doloremque, voluptas sunt hic. Vero architecto odit sapiente, sunt corrupti quod impedit nam minus ipsum.",
+            "quantity": 1
+        },
+        {
+            "id": 4,
+            "name": "BÁNH MÌ THỊT NƯỚNG",
+            "price": 18000,
+            "image": "https://cdn.tgdd.vn/2021/05/CookRecipe/Avatar/banh-mi-thit-bo-nuong-thumbnail-1.jpg",
+            "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aperiam provident incidunt earum sequi placeat doloremque, voluptas sunt hic. Vero architecto odit sapiente, sunt corrupti quod impedit nam minus ipsum.",
+            "quantity": 1
+        },
+        {
+            "id": 5,
+            "name": "BÁNH MÌ THỊT GÀ XÉ",
+            "price": 15000,
+            "image": "https://image.cooky.vn/recipe/g6/54200/s/6330b4fb-e619-46c7-af88-73f12416712d.jpeg",
+            "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aperiam provident incidunt earum sequi placeat doloremque, voluptas sunt hic. Vero architecto odit sapiente, sunt corrupti quod impedit nam minus ipsum.",
+            "quantity": 1
+        },
+        {
+            "id": 6,
+            "name": "BÁNH MÌ BỌT LỌC",
+            "price": 14000,
+            "image": "https://img-global.cpcdn.com/recipes/30b7774993b7fabd/680x482cq70/banh-mi-k%E1%BA%B9p-b%E1%BB%99t-l%E1%BB%8Dc-recipe-main-photo.jpg",
+            "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aperiam provident incidunt earum sequi placeat doloremque, voluptas sunt hic. Vero architecto odit sapiente, sunt corrupti quod impedit nam minus ipsum.",
+            "quantity": 1
+        },
+        {
+            "id": 7,
+            "name": "BÁNH MÌ XÍU MẠI",
+            "price": 16000,
+            "image": "https://yummyday.vn/uploads/images/cach-lam-xiu-mai-an-banh-mi.jpg",
+            "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aperiam provident incidunt earum sequi placeat doloremque, voluptas sunt hic. Vero architecto odit sapiente, sunt corrupti quod impedit nam minus ipsum.",
+            "quantity": 1
+        },
+        {
+            "id": 8,
+            "name": "BÁNH MÌ QUE",
+            "price": 12000,
+            "image": "https://monngonmoingay.com/wp-content/uploads/2020/09/banh-mi-que-xot-thit-cay-mayo-500.jpg",
+            "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aperiam provident incidunt earum sequi placeat doloremque, voluptas sunt hic. Vero architecto odit sapiente, sunt corrupti quod impedit nam minus ipsum.",
+            "quantity": 1
+        }
+    ],
+
+    "featuredProducts": [
+        {
+            "id": 1,
+            "name": "BÁNH MÌ ỐP LA",
+            "price": 15000,
+            "image": "https://img-global.cpcdn.com/recipes/01914f4be6cc4786/680x482cq70/banh-mi-vi%E1%BB%87t-nam-k%E1%BA%B9p-tr%E1%BB%A9ng-%E1%BB%91p-la-recipe-main-photo.jpg",
+            "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aperiam provident incidunt earum sequi placeat doloremque, voluptas sunt hic. Vero architecto odit sapiente, sunt corrupti quod impedit nam minus ipsum.",
+            "quantity": 1
+        },
+
+        {
+            "id": 2,
+            "name": "BÁNH MÌ CHẢ CÁ",
+            "price": 16000,
+            "image": "https://xebanhmithonhiky.com.vn/wp-content/uploads/2022/03/thanh-pham.jpg",
+            "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aperiam provident incidunt earum sequi placeat doloremque, voluptas sunt hic. Vero architecto odit sapiente, sunt corrupti quod impedit nam minus ipsum.",
+            "quantity": 1
+        },
+        {
+            "id": 3,
+            "name": "BÁNH MÌ THỊT CHẢ",
+            "price": 16000,
+            "image": "https://yummyday.vn/uploads/images/banh-mi-cha-2.jpg",
+            "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aperiam provident incidunt earum sequi placeat doloremque, voluptas sunt hic. Vero architecto odit sapiente, sunt corrupti quod impedit nam minus ipsum.",
+            "quantity": 1
+        },
+        {
+            "id": 4,
+            "name": "BÁNH MÌ THỊT NƯỚNG",
+            "price": 18000,
+            "image": "https://cdn.tgdd.vn/2021/05/CookRecipe/Avatar/banh-mi-thit-bo-nuong-thumbnail-1.jpg",
+            "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aperiam provident incidunt earum sequi placeat doloremque, voluptas sunt hic. Vero architecto odit sapiente, sunt corrupti quod impedit nam minus ipsum.",
+            "quantity": 1
+        }
+    ],
+
+    "latestProducts": [
+        {
+            "id": 5,
+            "name": "BÁNH MÌ THỊT GÀ XÉ",
+            "price": 15000,
+            "image": "https://image.cooky.vn/recipe/g6/54200/s/6330b4fb-e619-46c7-af88-73f12416712d.jpeg",
+            "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aperiam provident incidunt earum sequi placeat doloremque, voluptas sunt hic. Vero architecto odit sapiente, sunt corrupti quod impedit nam minus ipsum.",
+            "quantity": 1
+        },
+        {
+            "id": 6,
+            "name": "BÁNH MÌ BỘT LỌC",
+            "price": 14000,
+            "image": "https://img-global.cpcdn.com/recipes/30b7774993b7fabd/680x482cq70/banh-mi-k%E1%BA%B9p-b%E1%BB%99t-l%E1%BB%8Dc-recipe-main-photo.jpg",
+            "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aperiam provident incidunt earum sequi placeat doloremque, voluptas sunt hic. Vero architecto odit sapiente, sunt corrupti quod impedit nam minus ipsum.",
+            "quantity": 1
+        },
+        {
+            "id": 7,
+            "name": "BÁNH MÌ XÍU MẠI",
+            "price": 16000,
+            "image": "https://yummyday.vn/uploads/images/cach-lam-xiu-mai-an-banh-mi.jpg",
+            "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aperiam provident incidunt earum sequi placeat doloremque, voluptas sunt hic. Vero architecto odit sapiente, sunt corrupti quod impedit nam minus ipsum.",
+            "quantity": 1
+        },
+        {
+            "id": 8,
+            "name": "BÁNH MÌ QUE",
+            "price": 12000,
+            "image": "https://monngonmoingay.com/wp-content/uploads/2020/09/banh-mi-que-xot-thit-cay-mayo-500.jpg",
+            "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aperiam provident incidunt earum sequi placeat doloremque, voluptas sunt hic. Vero architecto odit sapiente, sunt corrupti quod impedit nam minus ipsum.",
+            "quantity": 1
+        }
+    ]
+
+}

@@ -1,0 +1,107 @@
+.menu {
+    background-color: white;
+    width: 53%;
+    height: 80px;
+    float: left;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.menu-nav-item {
+    font-family: Arial;
+    font-size: 16px;
+    border: none;
+    background-color: none;
+    margin-top: 22px;
+    margin-left: 20px;
+    margin-right: 50px;
+    padding: 10px 20px;
+    font-weight: bold;
+    color: rgb(85, 85, 85);
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.menu-nav-item-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    font-size: 14px;
+    padding: 6px 13px;
+    margin-left: 30px;
+    font-weight: bold;
+    color: rgb(85, 85, 85);
+    border: 3px solid rgb(85, 85, 85);
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+
+.menu-nav-item-btn>.icon-menu{
+    font-size: 16px;
+}
+
+.icon_my_cart {
+    font-size: 18px;
+    margin-right: 7px;
+    margin-left: 7px;
+}
+
+.menu-nav-item:hover {
+    color: rgb(235, 181, 118);
+}
+
+.menu-nav-item-btn:hover {
+    border: 3px solid rgb(235, 181, 118);
+    color: rgb(235, 181, 118);
+}
+
+.icon-menu {
+    padding-right: 2px;
+}
+
+.user {
+    background-color: white;
+    width: 27%;
+    height: 80px;
+    float: right;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.ctn_user {
+    display: flex;
+}
+
+.user_dkdn > p {
+    margin: 0;
+    font-weight: bold;
+    border-right: 2px solid rgb(85, 85, 85);
+    font-size: 15px;
+    padding-right: 8px;
+    margin-right: 8px;
+    color:  rgb(85, 85, 85);
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.user-cart-icon {
+    font-size: 38px;
+    color:  rgb(85, 85, 85);
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.user-cart-icon:hover{
+    color: rgb(235, 181, 118);
+}
+
+.user_dkdn > p:hover{
+    color: rgb(235, 181, 118);
+}
+

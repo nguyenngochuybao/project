@@ -1,0 +1,164 @@
+.Register > h1 > button {
+
+    color: white;
+}
+
+.form_login {
+    position: relative;
+    width: 440px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(115, 113, 113, 0.5);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    text-align: center;
+}
+
+
+.form_register{
+    position: relative;
+    width: 440px;
+    height: 465px;
+    background: transparent;
+    border: 2px solid rgba(115, 113, 113, 0.5);
+    backdrop-filter: blur(20px) ;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.form_register > h3 {
+    color: rgb(235, 181, 118);
+    margin-bottom: 10px;
+}
+
+
+.form_login > h3 {
+    color: rgb(235, 181, 118);
+    margin-bottom: 25px;
+}
+
+.inp_login > input {
+    width: 300px;
+    height: 45px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid rgb(235, 181, 118);
+    color: rgb(235, 181, 118);
+    font-size: 17px;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+.forgot_pass {
+    background-color: aliceblue;
+    width: 300px;
+    height: 30px;
+    margin-left: 70px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    background: none;
+}
+
+.forgot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(235, 181, 118);
+}
+
+.forgot > a {
+    font-size: 14px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(253, 135, 0);
+}
+
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://preview.milingona.co/themes/bakery/catalog/wp-content/uploads/2017/12/slide-1.jpg");
+    background-repeat: no-repeat;
+    background-size: 1540px ;
+    height: 100vh;
+    width: 100%;
+    height: 100vh;
+}
+
+.login_acc {
+    border: none;
+    width: 300px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: rgb(235, 181, 118);
+    color: white;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+.login_acc:hover {
+    background-color: white;
+    color: rgb(235, 181, 118);
+}
+
+
+
+.rgt > p {
+    font-size: 15px;
+    color: rgb(235, 181, 118);
+}
+
+.test_rgt {
+    color: rgb(253, 135, 0);
+}
+
+.icon_login_mail {
+    position: absolute;
+    right: 75px;
+    top: 135px;
+    font-size: 17px;
+    color: rgb(235, 181, 118);
+}
+
+.icon_register_mail {
+    position: absolute;
+    right: 75px;
+    top: 185px;
+    font-size: 17px;
+    color: rgb(235, 181, 118);
+}
+
+
+.icon_login_pass {
+    position: absolute;
+    right: 75px;
+    top: 200px;
+    font-size: 17px;
+    color: rgb(235, 181, 118);
+}
+
+.icon_register_pass {
+    position: absolute;
+    right: 75px;
+    top: 250px;
+    font-size: 17px;
+    color: rgb(235, 181, 118);
+}
+
+.icon_register_user{
+    position: absolute;
+    right: 75px;
+    top: 120px;
+    font-size: 17px;
+    color: rgb(235, 181, 118);
+}

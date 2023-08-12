@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
+
+.footer{
+    width: 100%;
+    height: 340px;
+    float: left;
+    background-image: url('../../images/slide.jpg');
+    background-repeat: no-repeat;
+    background-size: 1520px 370px;
+    display: block;
+}
+
+.footer-container{
+    display: block;
+    
+}
+
+.footer-icon{
+    display: flex;
+    justify-content: center;
+    margin: 24px 0;
+}
+
+.footer-icon>i{
+    background-color: rgb(85,85,85);
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+    border-radius: 50%;
+    color: white;
+    margin: 10px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.footer-icon>i:hover{
+    color: rgb(235,181,118);
+}
+
+.footer-logo{
+    display: block;
+    text-align: center;
+}
+
+.footer-logo>img{
+    width: 50px;
+    height: 50px;
+}
+
+.footer-logo>p{
+    margin: 0;
+    font-family: 'Sedgwick Ave Display', cursive;
+    font-size: 35px;
+    color: white;
+}
+
+.footer-address{
+    display: flex;
+    justify-content: center;
+}
+
+.footer-address>p{
+    color: white;
+}
+
+.new1{
+    color: white;
+    margin: 10px 20px;
+    margin-top: 16px;
+    font-size: 13px;
+    color: rgb(235,181,118);
+}
+.copyright>p{
+    color: white;
+    text-align: center;
+}
+
+.arrow{
+   
+}

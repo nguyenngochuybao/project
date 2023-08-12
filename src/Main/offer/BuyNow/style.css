@@ -1,0 +1,42 @@
+.buyNow{
+    background-color: rgb(247,247,247);
+    width: 50%;
+    height: 600px;
+    float: right;
+}
+
+.buyNow-content{
+    display: block;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.buyNow-content>h1{
+    font-size: 42px;
+    color: rgb(85, 85, 85);
+}
+
+.buyNow-content>p{
+    color: rgb(115, 114, 114);
+}
+
+.buyNow-btn{
+    font-size: 15px;
+    color: white;
+    background-color:#ebb576;
+    border: none;
+    font-weight: bold;
+    border-radius: 3px;
+    padding: 10px 17px;
+    margin-top: 18px;
+    border: 2px solid #ebb576;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.buyNow-btn:hover {
+    background-color: white;
+    color: #ebb576;
+}
+
+

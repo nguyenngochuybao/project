@@ -1,0 +1,15 @@
+
+.offer-img>img {
+    width: 760px;
+    height: 500px;
+    
+}
+
+
+.offerImg{
+    background-color: rgb(237,161,64);
+    width: 50%;
+    height: 600px;
+    float: left;
+    
+}
