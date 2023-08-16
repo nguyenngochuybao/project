@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Form, Input, Button, Divider, Typography } from "antd"
 import { AiOutlineGoogle, AiFillFacebook, AiOutlineTwitter } from "react-icons/ai";
-import { UserOutlined, LockOutlined, MailOutlined } from '@ant-design/icons'
+import { LockOutlined, MailOutlined } from '@ant-design/icons'
 import './style.css';
 function Login ()
 {
