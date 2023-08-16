@@ -1,0 +1,112 @@
+.thanh_toan {
+    width: 100%;
+    height: auto;
+    float: right;
+}
+
+.order_info {
+    width: 100%;
+    height: auto;
+}
+
+.form_order {
+    text-align: center;
+}
+
+.inp_orders {
+    margin: 10px 5px;
+    padding-left: 10px;
+    width: 400px;
+    height: 35px;
+    outline: none;
+    border-radius: 3px;
+    border: 1px solid rgb(166, 166, 166);
+}
+
+.inp_order {
+    margin: 10px 0;
+    padding-left: 10px;
+    width: 820px;
+    height: 35px;
+    outline: none;
+    border-radius: 3px;
+    border: 1px solid rgb(166, 166, 166);
+}
+
+.inp_test_order {
+    width: 820px;
+    height: 100px;
+    padding-left: 10px;
+    outline: none;
+    border-radius: 3px;
+    border: 1px solid rgb(166, 166, 166);
+}
+
+.sale_text {
+    width: 800px;
+    height: 30px;
+    margin-left: 150px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.sale_text_p {
+    margin: 0;
+    float: left;
+    color: rgb(81, 7, 7);
+}
+
+.sale_order {
+    width: 660px;
+    height: 35px;
+    padding-left: 10px;
+    outline: none;
+    border-radius: 3px;
+    margin-top: 5px;
+    margin-bottom: 8px;
+    border: 1px solid rgb(166, 166, 166);
+}
+
+.btn_sale {
+    background-color: rgb(32, 31, 194);
+    color: white;
+    font-weight: bold;
+    outline: none;
+    border-radius: 2px;
+    border: none;
+    font-size: 15px;
+    padding: 10px 45px;
+    margin-left: 10px;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-bottom: 8px;
+}
+
+.total_order{
+    width: 710px;
+    height: 30px;
+    margin-left: 150px;
+    display: flex;
+    align-items: center;
+}
+
+.order_vnd{
+    padding-left: 12px;
+    color:red;
+    margin: 0;
+}
+
+.thanh_toan_ngay{
+    color: white;
+    background-color: rgb(210,110,76);
+    font-weight: bold;
+    border-radius: 2px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 10px 20px;
+    margin: 10px;
+    margin-bottom: 20px;
+}

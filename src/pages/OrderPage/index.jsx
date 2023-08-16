@@ -1,4 +1,4 @@
-import './style.css'
+import './style.css';
 import { CiCircleRemove } from "react-icons/ci";
 import { useSelector, useDispatch } from "react-redux";
 import React, { useState, useEffect } from "react";
@@ -6,27 +6,17 @@ import { removeProduct, updateCartItem } from '../../redux/orderSlice';
 
 
 
-function Cart ()
-{
 
+function OrderPage ()
+{
     const dispatch = useDispatch();
     const { cartList } = useSelector( ( state ) => state.order );
-    
-
-
-    
-
 
     const handleRemove = ( product ) =>
     {
         dispatch( removeProduct( { id: product.id } ) );
     };
 
-
-
-
-
-    // Calculate the total price based on the quantities and prices of the products
     const total = cartList?.reduce( ( acc, product ) =>
         acc + product.price * product.quantity, 0 );
 
@@ -34,26 +24,19 @@ function Cart ()
         <div className="page-order">
             <div className='page-order-img'>
                 <p className="order-img-content1">
-                    GIỎ HÀNG
+                    THANH TOÁN
                 </p>
                 <p className="order-img-content2">
-                    Trang chủ<i>.</i>Giỏ hàng
+                    Trang chủ<i>.</i>Thanh toán
                 </p>
             </div>
-            <div className='page-order-item'>
+            <div className='thanh_toan'>
                 <h2 className='title-h2'>
-                    GIỎ HÀNG
+                    ĐƠN HÀNG THANH TOÁN
                 </h2>
                 <div className="order_cart">
                     <table className="border_table">
-                        <tr className="order_product_title">
-                            <th>&nbsp;</th>
-                            <th>&nbsp;</th>
-                            <th className="order_sanpham">SẢN PHẨM</th>
-                            <th>GIÁ</th>
-                            <th>SỐ LƯỢNG</th>
-                            <th>TỔNG CỘNG</th>
-                        </tr>
+
                         { cartList?.map( ( product ) => (
                             <tr key={ product.id }>
                                 <td className="icon_remove_td">
@@ -70,9 +53,9 @@ function Cart ()
                                         <td className="down" onClick={ () => dispatch( updateCartItem(
                                             {
                                                 id: product.id,
-                                                quantity: product.quantity > 1 ? product.quantity - 1 :1,
-                                            }   
-                                        ))}>
+                                                quantity: product.quantity > 1 ? product.quantity - 1 : 1,
+                                            }
+                                        ) ) }>
                                             -
                                         </td>
                                         <td className="up_down_item">{ product.quantity }</td>
@@ -86,20 +69,44 @@ function Cart ()
                                         </td>
                                     </tr>
                                 </td>
-                                <td className="order_product_total">{ (product.price * product.quantity).toLocaleString() } VNĐ</td>
+                                <td className="order_product_total">{ ( product.price * product.quantity ).toLocaleString() } VNĐ</td>
                             </tr>
                         ) ) }
                     </table>
-                    <div className="total">
-                        <p>Tổng giá</p>
-                        <p>{ total.toLocaleString() } VNĐ</p>
+                    <div className='order_info'>
+                        <h2 className='title-h2'>
+                            THÔNG TIN NGƯỜI MUA
+                        </h2>
+                        <div className="form_order">
+                            <input type="text" className='inp_orders' placeholder='Họ và tên' />
+                            <input type="text" className='inp_orders' placeholder='Số điện thoại' />
+                            <br />
+                            <input type="text" className='inp_order' placeholder='Địa chỉ Email' />
+                            <br />
+                            <input type="text" className='inp_order' placeholder='Địa chỉ nhận hàng' />
+                            <br />
+                            <textarea placeholder='Ghi chú đơn hàng' className='inp_test_order'></textarea>
+                            <br />
+                            <div className='sale_text'>
+                                <p className='sale_text_p'>* Mã giảm giá</p>
+                            </div>
+                            <input type="text" className='sale_order' placeholder='Mã giảm giá' />
+                            <button className='btn_sale'>Áp dụng</button>
+                            <div className="total_order">          
+                                <p className='sale_text_p'>Tổng giá:</p> 
+                                <p className='order_vnd'>{ total.toLocaleString() } VNĐ</p>
+                            </div>
+                            <button className='thanh_toan_ngay'>
+                                THANH TOÁN NGAY
+                            </button>
+                        </div>
                     </div>
-                    <button className="buy">Mua</button>
                 </div>
-
             </div>
+
         </div>
     )
 }
 
-export default Cart;
+
+export default OrderPage;

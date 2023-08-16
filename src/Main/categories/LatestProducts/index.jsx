@@ -74,7 +74,7 @@ function LatestProducts ()
                                 </div>
                                 <div className='title-price-page'>
                                     <p className='title-price-content-page'>{ product.name }</p>
-                                    <p className='title-price-item-page'>${ product.price | current }</p>
+                                    <p className='title-price-item-page'>{ product.price.toLocaleString() }VNĐ</p>
                                 </div>
                             </div>
                         ) ) }
@@ -92,7 +92,7 @@ function LatestProducts ()
                                                 <img src={ selectedProduct.image } alt="" />
                                             </div>
                                             <h2 className="tilte-detail">{ selectedProduct.name }</h2>
-                                            <p className="price-detail">{ selectedProduct.price }Đ</p>
+                                            <p className="price-detail">{ selectedProduct.price.toLocaleString() } VNĐ</p>
                                             <p className="nd-detail">{ selectedProduct.content }</p>
                                             <button
                                                 key={ selectedProduct.id }

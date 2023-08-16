@@ -1,53 +1,71 @@
 import { Link } from 'react-router-dom';
-
+import { Form, Input, Button, Divider, Typography } from "antd"
+import { AiOutlineGoogle, AiFillFacebook, AiOutlineTwitter } from "react-icons/ai";
+import { UserOutlined, LockOutlined, MailOutlined } from '@ant-design/icons'
 import './style.css';
-import { BsFillLockFill } from 'react-icons/bs';
-
 function Login ()
 {
-   
+
 
     return (
         <>
-            <div className="login">
-                <h1>
-                    <div className="form_login">
-                        <h3>ĐĂNG NHẬP</h3>
-                        <div className="inp_login">
-                            <input type="email" placeholder="Tài khoản"  />
-                            <i className="fa-solid fa-envelope icon_login_mail"></i>
-                            <br />
-                            <input type="password" placeholder="Mật khẩu" />
-                            <BsFillLockFill className="icon_login_pass" />
-                        </div>
-                        <div className="forgot_pass">
-                            <div className="forgot">
-                                <input type="checkbox" />
-                                Nhớ tài khoản
-                            </div>
-                            <div className="forgot">
-                                <a className="test_rgt">Quên mật khẩu</a>
-                            </div>
-                        </div>
-                        <Link to="/home">
-                            <button className="login_acc">
-                                Đăng nhập
-                            </button>
-                        </Link>
-                    
-                        <br />
-                        <div className="rgt">
-                            <p>
-                                Bạn đã có tài khoản chưa?.
-                                <a>
-                                    <Link to="/register" className="test_rgt">
-                                        Đăng ký
-                                    </Link>
-                                </a>
-                            </p>
-                        </div>
+            <div className="appBg">
+                <Form className="loginForm" onFinish={ Login }>
+                    <Typography.Title style={ { color: "#ebb576",fontWeight: "bold" } }>ĐĂNG NHẬP</Typography.Title>
+                    <Form.Item
+                        rules={ [ {
+                            required: true,
+                            type: 'email',
+                            message: "vui lòng nhập lại tài khoản"
+                        } ] }
+                      
+                        name={ "Email" }
+                    >
+                        <Input
+                            style={ { border: "#ebb576" } }
+                            placeholder=' Nhập tên Tài khoản'
+                            prefix={ <MailOutlined /> }
+                        />
+                    </Form.Item>
+                    <Form.Item
+                        rules={ [ {
+                            required: true,
+                            message: "vui lòng nhập lại mật khẩu"
+                        } ] }
+                        name={ 'Pass' }>
+                        <Input.Password
+                            style={ { border: "#ebb576"}}
+                            placeholder='Nhập mật Khẩu'
+                            prefix={ <LockOutlined /> }
+                        />
+                    </Form.Item>
+                    <Link to={ "/home" }>
+                        <Button style={ { background: "#ebb576"}} type='primary' htmlType='submit' block>
+                            Đăng nhập
+                        </Button>
+                    </Link>
+                    <Divider style={ { borderColor: "#ebb576", color: "#ebb576" } }>Đăng nhập bằng</Divider>
+                    <div className='socialogin'>
+                        <AiOutlineGoogle
+                            className='sociaIcon'
+                            style={ { color: "red" } }
+                        />
+                        <AiFillFacebook
+                            className='sociaIcon'
+                            style={ { color: "blue" } }
+                        />
+                        <AiOutlineTwitter
+                            className='sociaIcon'
+                            style={ { color: "cyan" } }
+                        />
                     </div>
-                </h1>
+                    <div>
+                        <p className='textColor'>Bạn đã có tài khoản chưa?.
+                            <Link to="/register" className="test_rgt">
+                                Đăng ký
+                            </Link></p>
+                    </div>
+                </Form>
             </div>
         </>
     );

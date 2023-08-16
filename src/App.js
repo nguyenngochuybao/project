@@ -1,14 +1,17 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
 import HomePage from './pages/Home';
 import ProductPage from './pages/Product';
-import OrderPage from './pages/Cart';
+import CartPage from './pages/Cart';
+import OrderPage from './pages/OrderPage';
 
 import Header from './layouts/Header';
 import Footer from './layouts/Footer';
 
 import Login from './user/login/login';
 import Register from './user/register/register';
+
 import './App.css';
+
 
 function App() {
   const location = useLocation();
@@ -22,6 +25,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/home" element={<HomePage />} />
         <Route path="/product" element={<ProductPage />} />
+        <Route path="/cart" element={ <CartPage /> } />
         <Route path="/order" element={<OrderPage />} />
       </Routes>
       {!isLoginPage && <Footer />}
