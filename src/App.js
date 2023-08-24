@@ -7,8 +7,8 @@ import OrderPage from './pages/OrderPage';
 import Header from './layouts/Header';
 import Footer from './layouts/Footer';
 
-import Login from './user/login/login';
-import Register from './user/register/register';
+import Login from './user/Login';
+import Register from './user/Register';
 
 import './App.css';
 

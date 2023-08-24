@@ -2,21 +2,42 @@ import { Link } from 'react-router-dom';
 import { Form, Input, Button, Divider, Typography } from "antd"
 import { UserOutlined, LockOutlined, MailOutlined } from '@ant-design/icons'
 import { AiOutlineGoogle, AiFillFacebook, AiOutlineTwitter } from "react-icons/ai";
+import { useState } from 'react';
+import { registerRequest } from '../../redux/auth';
+import { useDispatch } from 'react-redux';
 import './style.css';
 
 
 function Register ()
 {
+    const dispatch = useDispatch();
 
+    const click = ( values ) =>
+    {
+        dispatch(
+            registerRequest(
+                {
+                    data: {
+                        name: values.name,
+                        email: values.email,
+                        Password: values.Password
+                    }
+                }
+            )
+        )
+    }
 
     return (
         <div className="login">
-            <Form className="loginForm" onFinish={ Register }>
+            <Form className="loginForm"
+                onFinish={ ( values ) => click( values ) }
+                autoComplete='off'
+                name='registerFrom'
+            >
                 <Typography.Title style={ { color: "#ebb576", fontWeight: "bold" } }>ĐĂNG KÝ</Typography.Title>
                 <Form.Item
                     rules={ [ {
                         required: true,
-                        type: 'email',
                         message: "vui lòng nhập tên người dùng"
                     } ] }
                     name={ "user" }
@@ -25,14 +46,16 @@ function Register ()
                         style={ { border: "#ebb576" } }
                         placeholder=' Nhập tên người dùng'
                         prefix={ <UserOutlined /> }
-                        
                     />
                 </Form.Item>
                 <Form.Item
                     rules={ [ {
                         required: true,
+                        message: "vui lòng nhập Email"
+                    },
+                    {
                         type: 'email',
-                        message: "vui lòng nhập lại tài khoản"
+                        message: "vui lòng nhập đúng Email"
                     } ] }
                     name={ "Email" }
                 >
@@ -45,16 +68,42 @@ function Register ()
                 <Form.Item
                     rules={ [ {
                         required: true,
-                        message: "vui lòng nhập lại mật khẩu"
+                        message: "vui lòng nhập mật khẩu"
                     } ] }
-                    name={ 'Pass' }>
+                    name={ 'password' }>
                     <Input.Password
                         style={ { border: "#ebb576" } }
                         placeholder='Nhập mật Khẩu'
                         prefix={ <LockOutlined /> }
                     />
                 </Form.Item>
-                <Button style={ { background: "#ebb576" } } type='primary' htmlType='submit' block>
+                <Form.Item
+                    rules={ [ {
+                        required: true,
+                        message: "vui lòng nhập lại mật khẩu"
+                    },
+                    ( { getFieldValue } ) => ( {
+                        validator ( _, value )
+                        {
+                            if ( !value || getFieldValue( "password" ) === value )
+                            {
+                                return Promise.resolve();
+                            }
+                            return Promise.reject(
+                                new Error( "Mật khẩu bạn vừa nhập không trùng khớp!" )
+                            );
+                        },
+                    } ), ] }
+                    name={ 'confirm' }
+                    hasFeedback
+                >
+                    <Input.Password
+                        style={ { border: "#ebb576" } }
+                        placeholder='Nhập lại mật Khẩu'
+                        prefix={ <LockOutlined /> }
+                    />
+                </Form.Item>
+                <Button style={ { background: "#ebb576" } } type='primary' htmlType='submit' block >
                     Đăng ký
                 </Button>
                 <Divider style={ { borderColor: "#ebb576", color: "#ebb576" } }>Đăng nhập bằng</Divider>
