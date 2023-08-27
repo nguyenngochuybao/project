@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { Form, Input, Button, Divider, Typography } from "antd"
 import { UserOutlined, LockOutlined, MailOutlined } from '@ant-design/icons'
 import { AiOutlineGoogle, AiFillFacebook, AiOutlineTwitter } from "react-icons/ai";
@@ -11,17 +11,21 @@ import './style.css';
 function Register ()
 {
     const dispatch = useDispatch();
+    const navigate = useNavigate()
 
     const click = ( values ) =>
     {
+        console.log(values)
         dispatch(
             registerRequest(
                 {
                     data: {
-                        name: values.name,
-                        email: values.email,
-                        Password: values.Password
+                        user: values.user,
+                        Email: values.Email,
+                        password: values.password
                     }
+                    ,
+                    callback: () => navigate( "/" )
                 }
             )
         )

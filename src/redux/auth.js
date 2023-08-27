@@ -4,11 +4,55 @@ const authReducer = createSlice( {
     name: 'auth',
     initialState: {
         registerData: { load: false, error: "" },
+        loginData: { load: false, error: "" },
+        userInfo: {load:false, error:"", data: ""}
 
     },
     reducers: {
+
+         loginRequest: ( state, actions ) =>
+        {
+            const {data} = actions.payload
+            return {
+                ...state,
+                loginData: {
+                    ...state.loginData,
+                    load: true,
+                    error: "",
+                }
+            }
+        },
+        loginSuccess: ( state, actions ) =>
+        {
+            const {data} = actions.payload
+            return {
+                ...state,
+                loginData: {
+                    ...state.loginData,
+                    load: false,
+                },
+                userInfo: {
+                    ...state.userInfo,
+                    data: data.user,
+                }
+            }
+        },
+        loginFail: ( state, actions ) =>
+        {
+            return {
+                ...state,
+                loginData: {
+                    ...state.loginData,
+                    load: false,
+                    error: "error",
+                }
+            }
+        },
+
+        // register
         registerRequest: ( state, actions ) =>
         {
+            const {data} = actions.payload
             return {
                 ...state,
                 registerData: {
@@ -42,6 +86,6 @@ const authReducer = createSlice( {
     }
 } )
 
-export const { registerRequest, registerSuccess, registerFail } = authReducer.actions;
+export const { registerRequest, registerSuccess, registerFail,loginRequest,loginFail,loginSuccess } = authReducer.actions;
 
 export default authReducer.reducer;
