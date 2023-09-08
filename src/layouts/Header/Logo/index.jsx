@@ -7,7 +7,7 @@ function Logo ()
 {
     return (
         <>
-            <Link to={"/home"}>
+            <Link to={"/"}>
                 <div className='logo'>
                     <div className='logo-icon'>
                         <img src={ Bread } className='bread' />

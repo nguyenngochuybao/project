@@ -216,12 +216,11 @@ tr {
     font-weight: bold;
 }
 
-.buy {
-    margin-left: 420px;
-    margin-bottom: 20px;
+.buyCart {
     font-size: 20px;
     padding: 7px 40px;
     font-weight: bold;
+    margin: 0 10px;
     background-color: rgb(253, 184, 34);
     color: white;
     border: 2px solid rgb(253, 184, 34);
@@ -230,7 +229,7 @@ tr {
     cursor: pointer;
 }
 
-.buy:hover {
+.buyCart:hover {
     background-color: white;
     color: rgb(253, 184, 34);
 }
@@ -275,4 +274,51 @@ tr {
 .btnBoxCart:hover {
     color: rgb(253, 184, 34);
     background-color: white;
+}
+
+.cartBuyFrom{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.removeAll {
+    font-size: 18px;
+    padding: 6px 26px;
+    margin: 0 20px;
+    font-weight: bold;
+    background-color: red;
+    color: white;
+    border: 2px solid red;
+    border-radius: 3px;
+    transition: 0.6s;
+    cursor: pointer;
+}
+
+.removeAll:hover {
+    background-color: white;
+    color: red;
+}
+
+
+
+.buyCart {
+    font-size: 18px;
+    padding: 6px 26px;
+    font-weight: bold;
+    margin: 0 20px;
+    background-color: rgb(253, 184, 34);
+    color: white;
+    border: 2px solid rgb(253, 184, 34);
+    border-radius: 3px;
+    transition: 0.6s;
+    cursor: pointer;
+}
+
+.buyCart:hover {
+    background-color: white;
+    color: rgb(253, 184, 34);
 }

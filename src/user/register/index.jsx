@@ -15,7 +15,7 @@ function Register ()
 
     const click = ( values ) =>
     {
-        console.log(values)
+        console.log( values )
         dispatch(
             registerRequest(
                 {
@@ -25,7 +25,7 @@ function Register ()
                         password: values.password
                     }
                     ,
-                    callback: () => navigate( "/" )
+                    callback: () => navigate( "/login" )
                 }
             )
         )
@@ -43,7 +43,12 @@ function Register ()
                     rules={ [ {
                         required: true,
                         message: "vui lòng nhập tên người dùng"
-                    } ] }
+                    },
+                    {
+                        min: 6,
+                        message: "Tên người dùng phải có ít nhất 6 ký tự",
+                    },
+                    ] }
                     name={ "user" }
                 >
                     <Input
@@ -127,7 +132,7 @@ function Register ()
                 </div>
                 <div>
                     <p className='textColor'>Đăng nhập tài khoản.
-                        <Link to="/" className="test_rgt">
+                        <Link to="/login" className="test_rgt">
                             Đăng nhập
                         </Link></p>
                 </div>

@@ -15,15 +15,15 @@ import './App.css';
 
 function App() {
   const location = useLocation();
-  const isLoginPage = location.pathname === '/' || location.pathname === '/register';
+  const isLoginPage = location.pathname === '/login' || location.pathname === '/register';
 
   return (
     <div className="App">
       {!isLoginPage && <Header />}
       <Routes>
-        <Route path="/" element={ <Login /> } />
+        <Route path="/login" element={ <Login /> } />
         <Route path="/register" element={<Register />} />
-        <Route path="/home" element={<HomePage />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/product" element={<ProductPage />} />
         <Route path="/cart" element={ <CartPage /> } />
         <Route path="/order" element={<OrderPage />} />

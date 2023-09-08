@@ -2,15 +2,35 @@ import './style.css';
 import data from "../../db/data.json";
 import { AiOutlineSearch } from "react-icons/ai";
 import { BsCart4 } from "react-icons/bs";
-import React, { useState } from "react";
 import { useDispatch } from 'react-redux';
 import { addProduct } from '../../redux/orderSlice';
 import { ToastContainer, toast } from 'react-toastify';
+import React, { useState, useEffect, useRef } from "react";
 import 'react-toastify/dist/ReactToastify.css';
 
 
 function ProductPage ()
 {
+
+    let menuRef = useRef()
+
+    useEffect( () =>
+    {
+        let handler = ( event ) =>
+        {
+            if ( !menuRef.current.contains( event.target ) )
+            {
+                setOpenImage( false )
+            }
+
+        } 
+        document.addEventListener( "mousedown", handler);
+        return () =>
+        {
+        document.removeEventListener("mousedown", handler)
+        }
+    } )
+
     const dispatch = useDispatch();
     const [ openImage, setOpenImage ] = useState( false );
     const [ selectedProduct, setSelectedProduct ] = useState( null );
@@ -57,7 +77,7 @@ function ProductPage ()
     };
 
     const products = data.products;
-    
+
     const sortedProducts = [ ...products ];
 
     sortedProducts.sort( ( a, b ) =>
@@ -68,7 +88,7 @@ function ProductPage ()
         } else if ( sortOption === "price-asc" )
         {
             return a.price - b.price;
-        }  else
+        } else
         {
             return 0;
         }
@@ -130,7 +150,7 @@ function ProductPage ()
                     <div className={ openImage ? "modelOpen" : "modelClose" }>
                         <div className="onClickImage">
                             <div className="detail-content">
-                                <div className="ctn-detail-container">
+                                <div ref={ menuRef } className="ctn-detail-container">
                                     { selectedProduct && (
                                         <>
                                             <div className="detail-product">
@@ -159,7 +179,7 @@ function ProductPage ()
                                 X
                             </button>
                         </div>
-                        <div className="onClickImage_test"></div>
+                        <div className="onClickImage_test" ></div>
                     </div>
                     <ToastContainer />
                 </div>

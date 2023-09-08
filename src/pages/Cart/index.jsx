@@ -3,13 +3,13 @@ import { CiCircleRemove } from "react-icons/ci";
 import { useSelector, useDispatch } from "react-redux";
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { removeProduct, updateCartItem } from '../../redux/orderSlice';
+import { removeProduct, updateCartItem, removeAllProducts } from '../../redux/orderSlice';
 
 
 
 function Cart ()
 {
-
+  
 
     const navigate = useNavigate();
 
@@ -31,6 +31,11 @@ function Cart ()
     const handleRemove = ( product ) =>
     {
         dispatch( removeProduct( { id: product.id } ) );
+    };
+
+    const handleRemoveAll = () =>
+    {
+        dispatch( removeAllProducts() );
     };
 
 
@@ -102,7 +107,10 @@ function Cart ()
                             <p>Tổng giá</p>
                             <p>{ total.toLocaleString() } VNĐ</p>
                         </div>
-                        <button className="buy" onClick={ () => buyNavigate() }>Mua</button>
+                        <div className='cartBuyFrom'>
+                            <button className="removeAll" onClick={ () => handleRemoveAll() }>Xóa tất cả</button>
+                            <button className="buyCart" onClick={ () => buyNavigate() }>Mua</button>
+                        </div>
                     </div>
                 ) :
                     <div className="order_cart">

@@ -1,23 +1,6 @@
 {
-  "users": [
-    {
-      "user": "123",
-      "Email": "123@gmail.com",
-      "password": "123",
-      "id": 1
-    },
-    {
-      "user": "bao",
-      "Email": "bao@gmail.com",
-      "password": "123",
-      "id": 2
-    },
-    {
-      "Email": "bao@gmail.com",
-      "password": "234234",
-      "id": 3
-    }
-  ],
+  "users": [],
+  
   "products": [
     {
       "id": 1,

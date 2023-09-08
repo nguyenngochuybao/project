@@ -16,7 +16,7 @@ function Menu ()
 
             <div className="menu">
                 <div className="menu-item">
-                    <Link to={ '/home' } className='menu-nav-item'><AiFillHome className='icon-menu' /> TRANG CHỦ</Link>
+                    <Link to={ '/' } className='menu-nav-item'><AiFillHome className='icon-menu' /> TRANG CHỦ</Link>
                 </div>
                 <div className="menu-item">
                     <Link to={ '/product' } className='menu-nav-item'><i class="fa-solid fa-shop icon-menu"></i> CỬA HÀNG</Link>
@@ -40,7 +40,7 @@ function Menu ()
                 <div className="ctn_user">
                     <div className="user_dkdn">
                         <Link to={ "/register" } className="user_dkdn"><p>Đăng kí</p></Link>
-                        <Link to={ "/" } className="user_dkdn"><p>Đăng nhập</p></Link>
+                        <Link to={ "/login" } className="user_dkdn"><p>Đăng nhập</p></Link>
                     </div>
                     <div className='user-cart'>
                         <Link to={"/cart"}>
