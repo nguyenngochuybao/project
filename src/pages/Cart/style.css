@@ -157,6 +157,7 @@ tr {
 
 .order_product_quality {
     padding: 20px;
+    width: 120px;
 }
 
 .up_down > td {
@@ -241,16 +242,16 @@ tr {
     background-size: 500px 500px;
 }
 
-.imgBoxCart{
+.imgBoxCart {
     width: 520px;
     height: 300px;
 }
 
-.testBoxCart{
+.testBoxCart {
     text-align: center;
 }
 
-.testBoxCart>p{
+.testBoxCart > p {
     margin: 0;
     margin-top: 10px;
     font-weight: bold;
@@ -276,7 +277,7 @@ tr {
     background-color: white;
 }
 
-.cartBuyFrom{
+.cartBuyFrom {
     width: 100%;
     height: auto;
     display: flex;
@@ -321,4 +322,13 @@ tr {
 .buyCart:hover {
     background-color: white;
     color: rgb(253, 184, 34);
+}
+
+.attention {
+    text-align: center;
+    font-size: 18px;
+    color: rgb(90, 93, 98);
+    width: 120px;
+    height: auto;
+    padding: 20px;
 }

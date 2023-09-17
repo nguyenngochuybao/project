@@ -63,6 +63,7 @@ function Cart ()
                                 <th>&nbsp;</th>
                                 <th>&nbsp;</th>
                                 <th className="order_sanpham">SẢN PHẨM</th>
+                                <th>CHÚ Ý</th>
                                 <th>GIÁ</th>
                                 <th>SỐ LƯỢNG</th>
                                 <th>TỔNG CỘNG</th>
@@ -75,8 +76,8 @@ function Cart ()
                                     <td className="img_item_order">
                                         <img src={ product.image } className="img-order" alt="" />
                                     </td>
-
                                     <td className="order_product_item">{ product.name }</td>
+                                    <td className='attention'></td>
                                     <td className="order_product_price">{ product.price.toLocaleString() } VNĐ</td>
                                     <td className="order_product_quality">
                                         <tr className="up_down">

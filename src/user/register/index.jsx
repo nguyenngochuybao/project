@@ -21,7 +21,7 @@ function Register ()
                 {
                     data: {
                         user: values.user,
-                        Email: values.Email,
+                        email: values.email,
                         password: values.password
                     }
                     ,
@@ -66,7 +66,7 @@ function Register ()
                         type: 'email',
                         message: "vui lòng nhập đúng Email"
                     } ] }
-                    name={ "Email" }
+                    name={ "email" }
                 >
                     <Input
                         style={ { border: "#ebb576" } }

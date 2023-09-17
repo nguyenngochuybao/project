@@ -6,11 +6,30 @@ import { useDispatch } from 'react-redux';
 import { addProduct } from '../../redux/orderSlice';
 import { ToastContainer, toast } from 'react-toastify';
 import React, { useState, useEffect, useRef } from "react";
+import { DiCoda } from "react-icons/di";
 import 'react-toastify/dist/ReactToastify.css';
 
 
 function ProductPage ()
 {
+
+    const [ SelectedCay, setSelectedCay ] = useState( 'cay1' );
+    const [ SelectedRau, setSelectedRau ] = useState( 'rau1' );
+    const [ SelectedToping, setSelectedToping ] = useState( 'toping1' );
+
+    const handleRadioChange = ( key, event ) =>
+    {
+        if ( key === "cay" )
+        {
+            setSelectedCay( event.target.value )
+        } else if ( key === "rau" )
+        {
+            setSelectedRau( event.target.value )
+        } else
+        {
+            setSelectedToping( event.target.value )
+        }
+    };
 
     let menuRef = useRef()
 
@@ -23,11 +42,11 @@ function ProductPage ()
                 setOpenImage( false )
             }
 
-        } 
-        document.addEventListener( "mousedown", handler);
+        }
+        document.addEventListener( "mousedown", handler );
         return () =>
         {
-        document.removeEventListener("mousedown", handler)
+            document.removeEventListener( "mousedown", handler )
         }
     } )
 
@@ -166,10 +185,69 @@ function ProductPage ()
                                             >
                                                 <BsCart4 /> MUA NGAY
                                             </button>
+                                            <br />
+                                            <div className="productToping">
+                                                <div className="leftProduct">
+                                                    <label><i class="fa-solid fa-pepper-hot spicy"></i>Cay</label>
+                                                    <input
+                                                        type="radio"
+                                                        name='cay'
+                                                        value="cay1"
+                                                        checked={ SelectedCay === 'cay1' }
+                                                        onChange={ ( value ) => handleRadioChange( "cay", value ) }
+                                                    />
+                                                    <br />
+                                                    <label><DiCoda className='rau'/>Rau</label>
+                                                    <input
+                                                        type="radio"
+                                                        name='rau'
+                                                        value="rau1"
+                                                        checked={ SelectedRau === 'rau1' }
+                                                        onChange={ ( value ) => handleRadioChange( "rau", value ) }
+                                                    />
+                                                    <br />
+                                                    
+                                                    <label>{ selectedProduct.toping?.toping1.toLocaleString() }VNĐ</label>
+                                                    <input
+                                                        type="radio"
+                                                        name='toping'
+                                                        value="toping1"
+                                                        checked={ SelectedToping === 'toping1' }
+                                                        onChange={ ( value ) => handleRadioChange( "toping", value ) }
+                                                    />
+                                                </div>
+                                                <div className="rightProduct">
+                                                    <label className='koCay'>Không Cay</label>
+                                                    <input
+                                                        type="radio"
+                                                        name='cay'
+                                                        value="cay2"
+                                                        checked={ SelectedCay === 'cay2' }
+                                                        onChange={ ( value ) => handleRadioChange( "cay", value ) }
+                                                    />
+                                                    <label className='koCay'>Không Rau</label>
+                                                    <input
+                                                        type="radio"
+                                                        name='rau'
+                                                        value="rau2"
+                                                        checked={ SelectedRau === 'rau2' }
+                                                        onChange={ ( value ) => handleRadioChange( "rau", value ) }
+                                                    />
+                                                    <label className='koCay'>{ selectedProduct.toping?.toping2.toLocaleString() }VNĐ</label>
+                                                    <input
+                                                        type="radio"
+                                                        name='toping'
+                                                        value="toping2"
+                                                        checked={ SelectedToping === 'toping2' }
+                                                        onChange={ ( value ) => handleRadioChange( "toping", value ) }
+                                                    />
+                                                </div>
+                                            </div>
+                                            
                                         </>
                                     ) }
-                                    <br />
-                                    <textarea className="text-detail"></textarea>
+
+
                                 </div>
                             </div>
                             <button

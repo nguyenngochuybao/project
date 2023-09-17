@@ -20,7 +20,7 @@ function Login ()
             loginRequest(
                 {
                     data: {
-                        Email: values.Email,
+                        email: values.email,
                         password: values.password
                     }
                     ,
@@ -42,7 +42,7 @@ function Login ()
                             message: "vui lòng nhập lại Email"
                         } ] }
                       
-                        name={ "Email" }
+                        name={ "email" }
                     >
                         <Input
                             style={ { border: "#ebb576" } }
