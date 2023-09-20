@@ -24,7 +24,7 @@ function Login ()
                         password: values.password
                     }
                     ,
-                    callback: () => navigate( "/home" )
+                    callback: () => navigate( "/" )
                 }
             )
         )

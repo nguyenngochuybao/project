@@ -1,6 +1,14 @@
 {
-  "users": [],
-  
+  "users": [
+    {
+      "email": "123@gmail.com",
+      "password": "$2a$10$9jHkG48n4BCC7omU8UrT0OdzeMk/hoOvBxmOvwMzgIUF1h8mtFhye",
+      "user": "huy bao",
+      "createdAt": 1695215513301,
+      "updatedAt": 1695215513302,
+      "id": 1
+    }
+  ],
   "products": [
     {
       "id": 1,
@@ -9,11 +17,10 @@
       "image": "https://img-global.cpcdn.com/recipes/01914f4be6cc4786/680x482cq70/banh-mi-vi%E1%BB%87t-nam-k%E1%BA%B9p-tr%E1%BB%A9ng-%E1%BB%91p-la-recipe-main-photo.jpg",
       "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aperiam provident incidunt earum sequi placeat doloremque, voluptas sunt hic. Vero architecto odit sapiente, sunt corrupti quod impedit nam minus ipsum.",
       "quantity": 1,
-      "toping":{
+      "toping": {
         "toping1": 15000,
         "toping2": 20000
-      } 
-
+      }
     },
     {
       "id": 2,
@@ -22,10 +29,10 @@
       "image": "https://xebanhmithonhiky.com.vn/wp-content/uploads/2022/03/thanh-pham.jpg",
       "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aperiam provident incidunt earum sequi placeat doloremque, voluptas sunt hic. Vero architecto odit sapiente, sunt corrupti quod impedit nam minus ipsum.",
       "quantity": 1,
-      "toping":{
+      "toping": {
         "toping1": 16000,
         "toping2": 24000
-      } 
+      }
     },
     {
       "id": 3,
@@ -34,10 +41,10 @@
       "image": "https://yummyday.vn/uploads/images/banh-mi-cha-2.jpg",
       "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aperiam provident incidunt earum sequi placeat doloremque, voluptas sunt hic. Vero architecto odit sapiente, sunt corrupti quod impedit nam minus ipsum.",
       "quantity": 1,
-       "toping":{
+      "toping": {
         "toping1": 16000,
         "toping2": 24000
-      } 
+      }
     },
     {
       "id": 4,
@@ -46,10 +53,10 @@
       "image": "https://cdn.tgdd.vn/2021/05/CookRecipe/Avatar/banh-mi-thit-bo-nuong-thumbnail-1.jpg",
       "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aperiam provident incidunt earum sequi placeat doloremque, voluptas sunt hic. Vero architecto odit sapiente, sunt corrupti quod impedit nam minus ipsum.",
       "quantity": 1,
-       "toping":{
+      "toping": {
         "toping1": 18000,
         "toping2": 26000
-      } 
+      }
     },
     {
       "id": 5,
@@ -58,10 +65,10 @@
       "image": "https://image.cooky.vn/recipe/g6/54200/s/6330b4fb-e619-46c7-af88-73f12416712d.jpeg",
       "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aperiam provident incidunt earum sequi placeat doloremque, voluptas sunt hic. Vero architecto odit sapiente, sunt corrupti quod impedit nam minus ipsum.",
       "quantity": 1,
-       "toping":{
+      "toping": {
         "toping1": 15000,
         "toping2": 20000
-      } 
+      }
     },
     {
       "id": 6,
@@ -70,10 +77,10 @@
       "image": "https://img-global.cpcdn.com/recipes/30b7774993b7fabd/680x482cq70/banh-mi-k%E1%BA%B9p-b%E1%BB%99t-l%E1%BB%8Dc-recipe-main-photo.jpg",
       "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aperiam provident incidunt earum sequi placeat doloremque, voluptas sunt hic. Vero architecto odit sapiente, sunt corrupti quod impedit nam minus ipsum.",
       "quantity": 1,
-       "toping":{
+      "toping": {
         "toping1": 14000,
         "toping2": 18000
-      } 
+      }
     },
     {
       "id": 7,
@@ -82,11 +89,10 @@
       "image": "https://yummyday.vn/uploads/images/cach-lam-xiu-mai-an-banh-mi.jpg",
       "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aperiam provident incidunt earum sequi placeat doloremque, voluptas sunt hic. Vero architecto odit sapiente, sunt corrupti quod impedit nam minus ipsum.",
       "quantity": 1,
-       "toping":{
+      "toping": {
         "toping1": 16000,
         "toping2": 22000
-      } 
-      
+      }
     },
     {
       "id": 8,
@@ -95,10 +101,10 @@
       "image": "https://monngonmoingay.com/wp-content/uploads/2020/09/banh-mi-que-xot-thit-cay-mayo-500.jpg",
       "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aperiam provident incidunt earum sequi placeat doloremque, voluptas sunt hic. Vero architecto odit sapiente, sunt corrupti quod impedit nam minus ipsum.",
       "quantity": 1,
-       "toping":{
+      "toping": {
         "toping1": 12000,
         "toping2": 16000
-      } 
+      }
     }
   ],
   "featuredProducts": [

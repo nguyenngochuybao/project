@@ -7,13 +7,32 @@ import OrderPage from './pages/OrderPage';
 import Header from './layouts/Header';
 import Footer from './layouts/Footer';
 
-import Login from './user/Login';
-import Register from './user/Register';
+import Login from './user/login';
+import Register from './user/register';
 
+import { useEffect } from 'react';
+import jwtDecode from "jwt-decode";
+import { getUserInfoRequest } from "./redux/auth"
+import { useDispatch } from 'react-redux';
 import './App.css';
 
 
-function App() {
+function App ()
+{
+
+  const dispatch = useDispatch()
+  
+  
+  useEffect( () =>
+  {
+    const accessToken = localStorage.getItem( "accessToken" )
+    if ( accessToken )
+    {
+      const tokenData = jwtDecode( accessToken );
+      dispatch( getUserInfoRequest( {id: tokenData.sub} ))
+    }
+  },[] )
+
   const location = useLocation();
   const isLoginPage = location.pathname === '/login' || location.pathname === '/register';
 

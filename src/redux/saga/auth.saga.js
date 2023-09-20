@@ -1,6 +1,6 @@
 import { put, takeEvery } from "redux-saga/effects"
 import axios from "axios"
-import { registerRequest, loginRequest } from "../auth"
+import { registerRequest, loginRequest, getUserInfoRequest } from "../auth"
 import { notification } from "antd";
 
 
@@ -65,8 +65,35 @@ function* registerSaga ( action )
     }
 }
 
+
+
+function* getUserInfoSaga ( action )
+{
+    try
+    {
+        const { id } = action.payload;
+        const result = yield axios.get( `http://localhost:4000/users/${ id }` );
+        yield put( {
+            type: "getUserInfoSuccess",
+            payload: {
+                data: result.data,
+            }
+
+        } );
+    }
+    catch ( e )
+    {
+        yield put( {
+            type: "getUserInfoFail",
+            payload: {
+                error: "lỗi",
+            }
+        } )
+    }
+}
 export default function* authSaga ()
 {
     yield takeEvery( registerRequest, registerSaga )
     yield takeEvery( loginRequest, loginSaga )
+    yield takeEvery( getUserInfoRequest, getUserInfoSaga )
 }

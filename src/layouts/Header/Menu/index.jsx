@@ -6,11 +6,17 @@ import { AiFillShopping } from "react-icons/ai";
 import { BsBuildingFillCheck } from "react-icons/bs";
 import React, { Component } from "react";
 
+import { useSelector } from "react-redux";
+
+
 
 
 
 function Menu ()
 {
+    const { userInfo } = useSelector( ( state ) => state.auth )
+    console.log( userInfo.data )
+
     return (
         <>
 
@@ -38,16 +44,22 @@ function Menu ()
             </div>
             <div className='user'>
                 <div className="ctn_user">
-                    <div className="user_dkdn">
-                        <Link to={ "/register" } className="user_dkdn"><p>Đăng kí</p></Link>
-                        <Link to={ "/login" } className="user_dkdn"><p>Đăng nhập</p></Link>
-                    </div>
+                    { userInfo.data.id ? (
+                        <div>123</div>
+                    ) :
+                        (
+                            <div className="user_dkdn">
+                                <Link to={ "/register" } className="user_dkdn"><p>Đăng kí</p></Link>
+                                <Link to={ "/login" } className="user_dkdn"><p>Đăng nhập</p></Link>
+                            </div>
+                        )
+                    }
                     <div className='user-cart'>
-                        <Link to={"/cart"}>
+                        <Link to={ "/cart" }>
                             <AiOutlineShopping className='user-cart-icon' />
                         </Link>
                     </div>
-                    
+
                 </div>
             </div>
         </>
