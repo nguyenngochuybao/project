@@ -1,132 +1,208 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createReducer } from "@reduxjs/toolkit";
 
-const authReducer = createSlice( {
-    name: 'auth',
-    initialState: {
-        registerData: { load: false, error: "" },
-        loginData: { load: false, error: "" },
-        userInfo: { data: {}, load: true, error: "" }
+import { AUTH_ACTION, REQUEST, SUCCESS, FAIL } from "./constants";
 
-    },
-    reducers: {
+const initialState = {
+  userInfo: {
+    data: {},
+    load: true,
+    error: "",
+  },
+  loginData: { load: false, error: "" },
+  registerData: { load: false, error: "" },
+  changePasswordData: {
+    load: false,
+    error: "",
+  },
+};
 
-        loginRequest: ( state, actions ) =>
-        {
-            const { data } = actions.payload
-            return {
-                ...state,
-                loginData: {
-                    ...state.loginData,
-                    load: true,
-                    error: "",
-                }
-            }
-        },
-        loginSuccess: ( state, actions ) =>
-        {
-            const { data } = actions.payload
-            return {
-                ...state,
-                loginData: {
-                    ...state.loginData,
-                    load: false,
-                },
-                userInfo: {
-                    ...state.userInfo,
-                    data: data.user,
-                }
-            }
-        },
-        loginFail: ( state, actions ) =>
-        {
-            return {
-                ...state,
-                loginData: {
-                    ...state.loginData,
-                    load: false,
-                    error: "error",
-                }
-            }
-        },
+const authReducer = createReducer(initialState, {
+  // LOGIN
+  [REQUEST(AUTH_ACTION.LOGIN)]: (state, action) => {
+    return {
+      ...state,
+      userInfo: {
+        ...state.userInfo,
+        load: true,
+        error: "",
+      },
+    };
+  },
 
-        // register
-        registerRequest: ( state, actions ) =>
-        {
-            const { data } = actions.payload
-            return {
-                ...state,
-                registerData: {
-                    ...state.registerData,
-                    load: true,
-                    error: "",
-                }
-            }
-        },
-        registerSuccess: ( state, actions ) =>
-        {
-            return {
-                ...state,
-                registerData: {
-                    ...state.registerData,
-                    load: false,
-                }
-            }
-        },
-        registerFail: ( state, actions ) =>
-        {
-            return {
-                ...state,
-                registerData: {
-                    ...state.registerData,
-                    load: false,
-                    error: "error",
-                }
-            }
-        },
+  [SUCCESS(AUTH_ACTION.LOGIN)]: (state, action) => {
+    const { data } = action.payload;
+    return {
+      ...state,
+      userInfo: {
+        ...state.userInfo,
+        data: data.user,
+      },
+      loginData: {
+        ...state.loginData,
+        load: false,
+      },
+    };
+  },
 
-        // useInfo
-        getUserInfoRequest: ( state, action ) =>
-        {
-            return {
-                ...state,
-                userInfo: {
-                    ...state.userInfo,
-                    load: true,
-                    error: "error",
-                }
-            }
-        },
-        getUserInfoSuccess: ( state, action ) =>
-        {
-            const { data } = action.payload
-            console.log(data)
-            return {
-                ...state,
-                userInfo: {
-                    ...state.userInfo,
-                    load: false,
-                    data,
-                }
-            }
-        },
-        getUserInfoFail: ( state, action ) =>
-        {
-            const { error } = action.payload
+  [FAIL(AUTH_ACTION.LOGIN)]: (state, action) => {
+    const { error } = action.payload;
+    return {
+      ...state,
+      loginData: {
+        ...state.loginData,
+        load: false,
+        error,
+      },
+    };
+  },
 
-            return {
-                ...state,
-                userInfo: {
-                    ...state.userInfo,
-                    load: false,
-                    error,
-                }
-            }
-        }
+  // Register
+  [REQUEST(AUTH_ACTION.REGISTER)]: (state, action) => {
+    return {
+      ...state,
+      registerData: {
+        ...state.registerData,
+        load: true,
+        error: "",
+      },
+    };
+  },
 
+  [SUCCESS(AUTH_ACTION.REGISTER)]: (state, action) => {
+    const { data } = action.payload;
+    return {
+      ...state,
+      registerData: {
+        ...state.registerData,
+        load: false,
+      },
+    };
+  },
 
-    }
-} )
+  [FAIL(AUTH_ACTION.REGISTER)]: (state, action) => {
+    const { error } = action.payload;
+    return {
+      ...state,
+      registerData: {
+        ...state.registerData,
+        load: false,
+        error: error,
+      },
+    };
+  },
 
-export const { registerRequest, registerSuccess, registerFail, loginRequest, loginFail, loginSuccess, getUserInfoFail, getUserInfoSuccess, getUserInfoRequest } = authReducer.actions;
+  //GET_USER_INFO
+  [REQUEST(AUTH_ACTION.GET_USER_INFO)]: (state, action) => {
+    return {
+      ...state,
+      userInfo: {
+        ...state.userInfo,
+        load: true,
+        error: "",
+      },
+    };
+  },
 
-export default authReducer.reducer;
+  [SUCCESS(AUTH_ACTION.GET_USER_INFO)]: (state, action) => {
+    const { data } = action.payload;
+    return {
+      ...state,
+      userInfo: {
+        ...state.userInfo,
+        load: false,
+        data,
+      },
+    };
+  },
+
+  [FAIL(AUTH_ACTION.GET_USER_INFO)]: (state, action) => {
+    const { error } = action.payload;
+    return {
+      ...state,
+      userInfo: {
+        ...state.userInfo,
+        load: false,
+        error,
+      },
+    };
+  },
+
+  //UPDATE_USER_INFO
+  [REQUEST(AUTH_ACTION.UPDATE_USER_INFO)]: (state, action) => {
+    return {
+      ...state,
+      userInfo: {
+        ...state.userInfo,
+        load: true,
+        error: "",
+      },
+    };
+  },
+
+  [SUCCESS(AUTH_ACTION.UPDATE_USER_INFO)]: (state, action) => {
+    return {
+      ...state,
+      userInfo: {
+        ...state.userInfo,
+        load: false,
+      },
+    };
+  },
+
+  [FAIL(AUTH_ACTION.UPDATE_USER_INFO)]: (state, action) => {
+    const { error } = action.payload;
+    return {
+      ...state,
+      userInfo: {
+        ...state.userInfo,
+        load: false,
+        error,
+      },
+    };
+  },
+
+  // CHANGE_PASSWORD
+  [REQUEST(AUTH_ACTION.CHANGE_PASSWORD)]: (state, action) => {
+    return {
+      ...state,
+      changePasswordData: {
+        load: true,
+        error: "",
+      },
+    };
+  },
+  [SUCCESS(AUTH_ACTION.CHANGE_PASSWORD)]: (state, action) => {
+    return {
+      ...state,
+      changePasswordData: {
+        ...state.changePasswordData,
+        load: false,
+      },
+    };
+  },
+  [FAIL(AUTH_ACTION.CHANGE_PASSWORD)]: (state, action) => {
+    const { error } = action.payload;
+    return {
+      ...state,
+      changePasswordData: {
+        load: false,
+        error: error,
+      },
+    };
+  },
+
+  //LOGOUT
+  [REQUEST(AUTH_ACTION.LOGOUT)]: (state, action) => {
+    localStorage.removeItem("accessToken");
+    return {
+      ...state,
+      userInfo: {
+        data: {},
+        load: false,
+        error: "",
+      },
+    };
+  },
+});
+
+export default authReducer;

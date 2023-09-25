@@ -3,7 +3,7 @@ import { Form, Input, Button, Divider, Typography } from "antd"
 import { UserOutlined, LockOutlined, MailOutlined } from '@ant-design/icons'
 import { AiOutlineGoogle, AiFillFacebook, AiOutlineTwitter } from "react-icons/ai";
 import { useState } from 'react';
-import { registerRequest } from '../../redux/auth';
+import { registerAction } from '../../redux/action';
 import { useDispatch } from 'react-redux';
 import './style.css';
 
@@ -17,7 +17,7 @@ function Register ()
     {
         console.log( values )
         dispatch(
-            registerRequest(
+            registerAction(
                 {
                     data: {
                         user: values.user,
@@ -78,7 +78,11 @@ function Register ()
                     rules={ [ {
                         required: true,
                         message: "vui lòng nhập mật khẩu"
-                    } ] }
+                    },
+                    {
+                        min: 6,
+                        message: "Mật khẩu phải có ít nhất 6 ký tự",
+                    }, ] }
                     name={ 'password' }>
                     <Input.Password
                         style={ { border: "#ebb576" } }

@@ -12,7 +12,7 @@ import Register from './user/register';
 
 import { useEffect } from 'react';
 import jwtDecode from "jwt-decode";
-import { getUserInfoRequest } from "./redux/auth"
+import {getUserInfoAction } from "./redux/action"
 import { useDispatch } from 'react-redux';
 import './App.css';
 
@@ -29,7 +29,7 @@ function App ()
     if ( accessToken )
     {
       const tokenData = jwtDecode( accessToken );
-      dispatch( getUserInfoRequest( {id: tokenData.sub} ))
+      dispatch( getUserInfoAction( {id: tokenData.sub} ))
     }
   },[] )
 

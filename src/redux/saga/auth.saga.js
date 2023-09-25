@@ -1,6 +1,6 @@
 import { put, takeEvery } from "redux-saga/effects"
 import axios from "axios"
-import { registerRequest, loginRequest, getUserInfoRequest } from "../auth"
+import {  AUTH_ACTION, REQUEST, SUCCESS, FAIL } from "../constants"
 import { notification } from "antd";
 
 
@@ -14,7 +14,7 @@ function* loginSaga ( action )
         yield localStorage.setItem( "accessToken", result.data.accessToken )
         yield callback();
         yield put( {
-            type: "loginSuccess",
+            type: SUCCESS(AUTH_ACTION.LOGIN),
             payload: {
                 data: result.data,
             }
@@ -27,7 +27,7 @@ function* loginSaga ( action )
     catch ( e )
     {
         yield put( {
-            type: "loginFail",
+            type: FAIL(AUTH_ACTION.LOGIN),
             payload: {
                 error: "Email hoặc mật khẩu không đúng",
             }
@@ -44,7 +44,7 @@ function* registerSaga ( action )
         const result = yield axios.post( "http://localhost:4000/register", data );
         yield callback();
         yield put( {
-            type: "registerSuccess",
+            type: SUCCESS(AUTH_ACTION.REGISTER),
             payload: {
                 data: result.data,
             }
@@ -57,7 +57,7 @@ function* registerSaga ( action )
     catch ( e )
     {
         yield put( {
-            type: "registerFail",
+            type: FAIL(AUTH_ACTION.REGISTER),
             payload: {
                 error: e.response.data,
             }
@@ -74,7 +74,7 @@ function* getUserInfoSaga ( action )
         const { id } = action.payload;
         const result = yield axios.get( `http://localhost:4000/users/${ id }` );
         yield put( {
-            type: "getUserInfoSuccess",
+            type: SUCCESS(AUTH_ACTION.GET_USER_INFO),
             payload: {
                 data: result.data,
             }
@@ -84,7 +84,7 @@ function* getUserInfoSaga ( action )
     catch ( e )
     {
         yield put( {
-            type: "getUserInfoFail",
+            type: FAIL(AUTH_ACTION.GET_USER_INFO),
             payload: {
                 error: "lỗi",
             }
@@ -93,7 +93,7 @@ function* getUserInfoSaga ( action )
 }
 export default function* authSaga ()
 {
-    yield takeEvery( registerRequest, registerSaga )
-    yield takeEvery( loginRequest, loginSaga )
-    yield takeEvery( getUserInfoRequest, getUserInfoSaga )
+    yield takeEvery( REQUEST(AUTH_ACTION.REGISTER), registerSaga )
+    yield takeEvery( REQUEST(AUTH_ACTION.LOGIN), loginSaga )
+    yield takeEvery( REQUEST(AUTH_ACTION.GET_USER_INFO), getUserInfoSaga )
 }

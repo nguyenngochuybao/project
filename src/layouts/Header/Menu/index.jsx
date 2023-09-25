@@ -45,7 +45,7 @@ function Menu ()
             <div className='user'>
                 <div className="ctn_user">
                     { userInfo.data.id ? (
-                        <div>123</div>
+                        <div className='nameUser'>{ userInfo.data.user}</div>
                     ) :
                         (
                             <div className="user_dkdn">

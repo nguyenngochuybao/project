@@ -5,7 +5,7 @@ import { LockOutlined, MailOutlined } from '@ant-design/icons'
 import './style.css';
 import { useDispatch } from 'react-redux';
 import {  useNavigate } from 'react-router-dom';
-import { loginRequest } from '../../redux/auth';
+import { loginAction } from '../../redux/action';
 function Login ()
 {
 
@@ -17,7 +17,7 @@ function Login ()
     {
         console.log( values )
         dispatch(
-            loginRequest(
+            loginAction(
                 {
                     data: {
                         email: values.email,
