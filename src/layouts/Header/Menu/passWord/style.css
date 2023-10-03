@@ -1,0 +1,142 @@
+.userPassWord {
+    background-color: rgb(243, 243, 243);
+    width: 100%;
+    height: 500px;
+}
+
+.userPassWordLeft {
+    float: left;
+    background-color: rgb(243, 243, 243);
+    width: 30%;
+    height: auto;
+}
+
+.userPassWordRight {
+    float: right;
+    background-color: rgb(243, 243, 243);
+    width: 70%;
+    height: auto;
+}
+
+.menuLeft {
+    float: right;
+    background-color: rgb(254, 252, 252);
+    border-radius: 7px;
+    width: 280px;
+    height: 290px;
+    margin-top: 22px;
+    margin-right: 20px;
+    box-shadow: 0px 0px 5px 0px grey;
+}
+
+.passWordRight {
+    width: 200px;
+    height: 350px;
+    margin-top: 22px;
+}
+
+.inpPassWord {
+    width: 300px;
+}
+
+
+.menuNameUser {
+    width: 100%;
+    height: 90px;
+    float: left;
+}
+
+.menuUserinfo {
+    float: left;
+    width: 100%;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.menuPassWord {
+    float: left;
+    width: 100%;
+    height: 55px;
+    margin-top: 10px;
+}
+
+.menuNameUserLeft{
+    width: 25%;
+    height: 100%;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menuNameUserRight{
+    width: 75%;
+    height: 100%;
+    float: right;
+    display: block;
+}
+
+.menuNameUserIcon{
+    font-size: 55px;
+}
+
+.menuNameUserTop{
+    width: 100%;
+    height: 46%;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+.menuNameUserBottom{
+    margin-top: 5px;
+    width: 100%;
+    height: 54%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.hr{
+    margin: 0;
+    width: 90px;
+}
+.thongtin_sanpham3 {
+    display: flex;
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+    width: 95%;
+    height: 40px;
+    margin-left: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.thongtin_sanpham3:hover {
+    background-color: #ebb576;
+}
+
+.iconPass3 {
+    display: flex;
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+    width: 95%;
+    height: 40px;
+    margin-left: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.iconPass3:hover {
+    background-color: #ebb576;
+}
+
+.text123{
+    color: black;
+}
+
+.iconPass3>p{
+    color: black;
+}

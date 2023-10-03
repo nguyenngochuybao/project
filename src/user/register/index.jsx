@@ -42,7 +42,7 @@ function Register ()
                 <Form.Item
                     rules={ [ {
                         required: true,
-                        message: "vui lòng nhập tên người dùng"
+                        message: "Vui lòng nhập tên người dùng"
                     },
                     {
                         min: 6,
@@ -77,7 +77,7 @@ function Register ()
                 <Form.Item
                     rules={ [ {
                         required: true,
-                        message: "vui lòng nhập mật khẩu"
+                        message: "Vui lòng nhập mật khẩu"
                     },
                     {
                         min: 6,
@@ -93,7 +93,7 @@ function Register ()
                 <Form.Item
                     rules={ [ {
                         required: true,
-                        message: "vui lòng nhập lại mật khẩu"
+                        message: "Vui lòng nhập lại mật khẩu"
                     },
                     ( { getFieldValue } ) => ( {
                         validator ( _, value )

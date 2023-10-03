@@ -15,6 +15,30 @@
       "createdAt": 1695647834812,
       "updatedAt": 1695647834813,
       "id": 2
+    },
+    {
+      "email": "baokx12@gmail.com",
+      "password": "$2a$10$38HDHwK7DL918g4T5gI4JOrKlmXyRUXGhZGUA9tlwqP3jlsO8o6yy",
+      "user": "nguyễn ngọc huy bảo",
+      "createdAt": 1695721844286,
+      "updatedAt": 1695721844286,
+      "id": 3
+    },
+    {
+      "email": "Baokx12@gmail.com",
+      "password": "$2a$10$zscpmibko.CI1cE5cuFsQeJ2R0MKeJTwbuJVtl4oXYj0qs8DipGAq",
+      "user": "Nguyễn Ngọc Huy Bảo",
+      "createdAt": 1696181470727,
+      "updatedAt": 1696181470727,
+      "id": 4
+    },
+    {
+      "email": "123123@gmail.com",
+      "password": "$2a$10$//b2amxUP6PTssaD77S2Q.v.YbegU9tzqTOhDmtZts5WvO2Qi6YNS",
+      "user": "123123",
+      "createdAt": 1696340634063,
+      "updatedAt": 1696340634064,
+      "id": 5
     }
   ],
   "products": [

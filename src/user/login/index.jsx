@@ -4,7 +4,7 @@ import { AiOutlineGoogle, AiFillFacebook, AiOutlineTwitter } from "react-icons/a
 import { LockOutlined, MailOutlined } from '@ant-design/icons'
 import './style.css';
 import { useDispatch } from 'react-redux';
-import {  useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { loginAction } from '../../redux/action';
 function Login ()
 {
@@ -12,7 +12,7 @@ function Login ()
     const dispatch = useDispatch();
     const navigate = useNavigate()
 
-    
+
     const click = ( values ) =>
     {
         console.log( values )
@@ -33,15 +33,19 @@ function Login ()
     return (
         <>
             <div className="appBg">
-                <Form className="loginForm" onFinish={ (values)=> click(values) }>
-                    <Typography.Title style={ { color: "#ebb576",fontWeight: "bold" } }>ĐĂNG NHẬP</Typography.Title>
+                <Form className="loginForm" onFinish={ ( values ) => click( values ) }>
+                    <Typography.Title style={ { color: "#ebb576", fontWeight: "bold" } }>ĐĂNG NHẬP</Typography.Title>
                     <Form.Item
                         rules={ [ {
                             required: true,
-                            type: 'email',
                             message: "vui lòng nhập lại Email"
+                        }
+                            ,
+                        {
+                            type: 'email',
+                            message: "vui lòng nhập đúng Email"
                         } ] }
-                      
+
                         name={ "email" }
                     >
                         <Input
@@ -54,10 +58,14 @@ function Login ()
                         rules={ [ {
                             required: true,
                             message: "vui lòng nhập lại mật khẩu"
+                        },
+                        {
+                            min: 6,
+                            message: "Mật khẩu phải có ít nhất 6 ký tự",
                         } ] }
                         name={ 'password' }>
                         <Input.Password
-                            style={ { border: "#ebb576"}}
+                            style={ { border: "#ebb576" } }
                             placeholder='Nhập mật Khẩu'
                             prefix={ <LockOutlined /> }
                         />

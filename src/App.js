@@ -4,6 +4,9 @@ import ProductPage from './pages/Product';
 import CartPage from './pages/Cart';
 import OrderPage from './pages/OrderPage';
 
+import Password from './layouts/Header/Menu/passWord';
+import Info from './layouts/Header/Menu/userInfo';
+
 import Header from './layouts/Header';
 import Footer from './layouts/Footer';
 
@@ -45,7 +48,9 @@ function App ()
         <Route path="/" element={<HomePage />} />
         <Route path="/product" element={<ProductPage />} />
         <Route path="/cart" element={ <CartPage /> } />
-        <Route path="/order" element={<OrderPage />} />
+        <Route path="/order" element={ <OrderPage /> } />
+        <Route path='/PassWord' element={<Password/>} />
+        <Route path='/info' element={<Info/>} />
       </Routes>
       {!isLoginPage && <Footer />}
     </div>
