@@ -2,10 +2,10 @@
   "users": [
     {
       "email": "123@gmail.com",
-      "password": "$2a$10$9jHkG48n4BCC7omU8UrT0OdzeMk/hoOvBxmOvwMzgIUF1h8mtFhye",
-      "user": "huy bao",
+      "password": "$2a$10$AxTjvjfRufS4q.ZkM4/hkec8GymujNYTMbmJpZDEmOuJo7tLto50a",
+      "user": "Nguyễn ",
       "createdAt": 1695215513301,
-      "updatedAt": 1695215513302,
+      "updatedAt": 1696412891554,
       "id": 1
     },
     {
@@ -35,9 +35,9 @@
     {
       "email": "123123@gmail.com",
       "password": "$2a$10$//b2amxUP6PTssaD77S2Q.v.YbegU9tzqTOhDmtZts5WvO2Qi6YNS",
-      "user": "123123",
+      "user": "Huy Bảo",
       "createdAt": 1696340634063,
-      "updatedAt": 1696340634064,
+      "updatedAt": 1696344138351,
       "id": 5
     }
   ],

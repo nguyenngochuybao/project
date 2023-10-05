@@ -51,7 +51,7 @@ function Password ()
             changePasswordForm.setFields( [
                 {
                     name: "password",
-                    errors: [ "Mật khẩu đã tồn tại!" ],
+                    errors: [ "Mật khẩu không tồn tại!" ],
                 },
             ] );
         }

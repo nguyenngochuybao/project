@@ -38,11 +38,12 @@ const MenuUserPassWord = styled.div`
 
 function Info ()
 {
+
     const [ AccountForm ] = Form.useForm();
 
     const { pathname } = useLocation()
 
-    const { userInfo } = useSelector( ( state ) => state.auth )
+    const { userInfo, changePasswordData } = useSelector( ( state ) => state.auth )
 
 
     const dispatch = useDispatch();
@@ -69,15 +70,18 @@ function Info ()
 
     const handleSubmitAccountForm = ( values ) =>
     {
+        window.location.reload()
         const { fullName } = values;
+        console.log( fullName )
         dispatch(
             updateUserInfoAction( {
                 id: initialValues.id,
                 user: fullName,
-            } )
+            },
+            )
+
         );
     };
-    console.log( updateUserInfoAction )
 
 
     return (
@@ -171,7 +175,11 @@ function Info ()
                                     ></Input>
                                 </Form.Item>
                             </Space>
-                            <Button style={ { background: "#ebb576" } } type='primary' htmlType='submit'  >
+                            <Button
+                                style={ { background: "#ebb576" } }
+                                type='primary'
+                                htmlType='submit'
+                            >
                                 Đổi thông tin
                             </Button>
                         </Form>
