@@ -15,6 +15,7 @@ import Register from './user/register';
 
 import { useEffect } from 'react';
 import jwtDecode from "jwt-decode";
+
 import {getUserInfoAction } from "./redux/action"
 import { useDispatch } from 'react-redux';
 import './App.css';
@@ -26,7 +27,7 @@ function App ()
   const dispatch = useDispatch()
   
   
-  useEffect( () =>
+  useEffect( () =>  
   {
     const accessToken = localStorage.getItem( "accessToken" )
     if ( accessToken )

@@ -13,3 +13,10 @@
     position: fixed;
     z-index: 1;
 }
+@media (max-width: 768px) {
+  /* CSS dành cho màn hình có chiều rộng tối đa là 768px */
+  .fixed {
+    flex-direction: column; /* Sắp xếp các thành phần theo cột khi màn hình nhỏ hơn */
+  }
+  /* Các điều chỉnh khác tùy thuộc vào yêu cầu của bạn */
+}

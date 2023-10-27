@@ -8,28 +8,40 @@ import { ToastContainer, toast } from 'react-toastify';
 import React, { useState, useEffect, useRef } from "react";
 import { DiCoda } from "react-icons/di";
 import 'react-toastify/dist/ReactToastify.css';
+import { Radio, Form, Space, RadioChangeEvent } from 'antd';
 
+
+
+
+// const plainOptions1 = [ 'Cay', 'Không Cay' ];
+// const plainOptions2 = [ 'Rau', 'Không Rau' ];
 
 function ProductPage ()
 {
 
-    const [ SelectedCay, setSelectedCay ] = useState( 'cay1' );
-    const [ SelectedRau, setSelectedRau ] = useState( 'rau1' );
-    const [ SelectedToping, setSelectedToping ] = useState( 'toping1' );
+    const [ spicy, setSpicy ] = useState( "Cay" );
 
-    const handleRadioChange = ( key, event ) =>
+    console.log( "Giá trị của value1:", spicy );
+    const [ vegetable, setVegetable ] = useState( 'Rau' );
+
+
+
+    const onChange1 = ( e ) =>
     {
-        if ( key === "cay" )
-        {
-            setSelectedCay( event.target.value )
-        } else if ( key === "rau" )
-        {
-            setSelectedRau( event.target.value )
-        } else
-        {
-            setSelectedToping( event.target.value )
-        }
+        console.log( "hello", e.target.value );
+        setSpicy( e.target.value );
     };
+
+    const onChange2 = ( { target: { value } } ) =>
+    {
+        setVegetable( value );
+    };
+
+
+
+
+
+
 
     let menuRef = useRef()
 
@@ -64,9 +76,12 @@ function ProductPage ()
                 name: product.name,
                 price: product.price,
                 image: product.image,
+                spicy: spicy,
+                vegetable: vegetable,
                 quantity: 1
             } )
         );
+
         toast.success( 'Đã thêm vào giỏ hàng', {
             position: "top-right",
             autoClose: 2000,
@@ -85,6 +100,9 @@ function ProductPage ()
         setSelectedProduct( product );
     };
 
+
+
+    // search
     const handleSearch = ( event ) =>
     {
         setSearchTerm( event.target.value );
@@ -101,9 +119,11 @@ function ProductPage ()
 
     sortedProducts.sort( ( a, b ) =>
     {
+        // giảm
         if ( sortOption === "price-desc" )
         {
             return b.price - a.price;
+            // tăng
         } else if ( sortOption === "price-asc" )
         {
             return a.price - b.price;
@@ -188,62 +208,42 @@ function ProductPage ()
                                             <br />
                                             <div className="productToping">
                                                 <div className="leftProduct">
-                                                    <label><i class="fa-solid fa-pepper-hot spicy"></i>Cay</label>
-                                                    <input
-                                                        type="radio"
-                                                        name='cay'
-                                                        value="cay1"
-                                                        checked={ SelectedCay === 'cay1' }
-                                                        onChange={ ( value ) => handleRadioChange( "cay", value ) }
-                                                    />
-                                                    <br />
-                                                    <label><DiCoda className='rau'/>Rau</label>
-                                                    <input
-                                                        type="radio"
-                                                        name='rau'
-                                                        value="rau1"
-                                                        checked={ SelectedRau === 'rau1' }
-                                                        onChange={ ( value ) => handleRadioChange( "rau", value ) }
-                                                    />
-                                                    <br />
-                                                    
-                                                    <label>{ selectedProduct.toping?.toping1.toLocaleString() }VNĐ</label>
-                                                    <input
-                                                        type="radio"
-                                                        name='toping'
-                                                        value="toping1"
-                                                        checked={ SelectedToping === 'toping1' }
-                                                        onChange={ ( value ) => handleRadioChange( "toping", value ) }
-                                                    />
+
+                                                    <div className="cay1">
+                                                        <label style={ { marginRight: "30px" } }><i class="fa-solid fa-pepper-hot spicyIcon"></i>Cay</label>
+                                                    </div>
+                                                    <>
+                                                        <Radio.Group
+                                                            onChange={ onChange1 }
+                                                            value={ spicy }
+                                                        >
+                                                            <Space direction='vertical'>
+                                                                <Radio value="Cay">Cay</Radio>
+                                                                <Radio value="Không Cay">Không Cay</Radio>
+                                                            </Space>
+                                                        </Radio.Group>
+                                                    </>
+
                                                 </div>
                                                 <div className="rightProduct">
-                                                    <label className='koCay'>Không Cay</label>
-                                                    <input
-                                                        type="radio"
-                                                        name='cay'
-                                                        value="cay2"
-                                                        checked={ SelectedCay === 'cay2' }
-                                                        onChange={ ( value ) => handleRadioChange( "cay", value ) }
-                                                    />
-                                                    <label className='koCay'>Không Rau</label>
-                                                    <input
-                                                        type="radio"
-                                                        name='rau'
-                                                        value="rau2"
-                                                        checked={ SelectedRau === 'rau2' }
-                                                        onChange={ ( value ) => handleRadioChange( "rau", value ) }
-                                                    />
-                                                    <label className='koCay'>{ selectedProduct.toping?.toping2.toLocaleString() }VNĐ</label>
-                                                    <input
-                                                        type="radio"
-                                                        name='toping'
-                                                        value="toping2"
-                                                        checked={ SelectedToping === 'toping2' }
-                                                        onChange={ ( value ) => handleRadioChange( "toping", value ) }
-                                                    />
+                                                    <div className="rau1">
+                                                        <label style={ { marginRight: "30px" } }><DiCoda className='rau' />Rau</label>
+                                                    </div>
+                                                    <Radio.Group
+                                                        className='ant-radio-group-rau'
+                                                        onChange={ onChange2 }
+                                                        value={ vegetable }
+                                                    >
+                                                        <Space direction='vertical'>
+                                                            <Radio value="Rau">Rau</Radio>
+                                                            <Radio value="Không Rau">Không Rau</Radio>
+                                                        </Space>
+                                                    </Radio.Group>
+
+
                                                 </div>
                                             </div>
-                                            
+
                                         </>
                                     ) }
 

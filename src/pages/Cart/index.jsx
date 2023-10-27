@@ -7,9 +7,10 @@ import { removeProduct, updateCartItem, removeAllProducts } from '../../redux/or
 
 
 
+
 function Cart ()
 {
-  
+
 
     const navigate = useNavigate();
 
@@ -35,7 +36,10 @@ function Cart ()
 
     const handleRemoveAll = () =>
     {
-        dispatch( removeAllProducts() );
+        dispatch(
+            removeAllProducts()
+        );
+
     };
 
 
@@ -63,7 +67,7 @@ function Cart ()
                                 <th>&nbsp;</th>
                                 <th>&nbsp;</th>
                                 <th className="order_sanpham">SẢN PHẨM</th>
-                                <th>CHÚ Ý</th>
+                                <th>GHI CHÚ</th>
                                 <th>GIÁ</th>
                                 <th>SỐ LƯỢNG</th>
                                 <th>TỔNG CỘNG</th>
@@ -77,7 +81,10 @@ function Cart ()
                                         <img src={ product.image } className="img-order" alt="" />
                                     </td>
                                     <td className="order_product_item">{ product.name }</td>
-                                    <td className='attention'></td>
+                                    <td className='attention'>
+                                        <div className="spicy"><p>{ product.spicy }</p></div>
+                                        <div className="vegetable"><p>{ product.vegetable }</p></div>
+                                    </td>
                                     <td className="order_product_price">{ product.price.toLocaleString() } VNĐ</td>
                                     <td className="order_product_quality">
                                         <tr className="up_down">

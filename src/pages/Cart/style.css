@@ -328,7 +328,25 @@ tr {
     text-align: center;
     font-size: 18px;
     color: rgb(90, 93, 98);
-    width: 120px;
-    height: auto;
-    padding: 20px;
+    width: 150px;
+    height: 84px;
+
+}
+
+.spicy {
+    text-align: center;
+    font-size: 18px;
+    color: rgb(90, 93, 98);
+    width: 100%;
+    height: 50%;
+    float: left;
+}
+
+.vegetable {
+    text-align: center;
+    font-size: 18px;
+    color: rgb(90, 93, 98);
+    width: 100%;
+    height: 50%;
+    float: right;
 }

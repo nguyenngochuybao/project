@@ -4,9 +4,10 @@ import { UserOutlined, LockOutlined, MailOutlined } from '@ant-design/icons'
 import { BiUser } from "react-icons/bi";
 import { AiOutlineUser } from "react-icons/ai";
 import { BsBuildingFillCheck, BsKeyFill } from "react-icons/bs";
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 import styled, { css } from 'styled-components';
+import { loguotAction } from '../../../../redux/action';
 import { changePasswordAction } from '../../../../redux/action';
 
 import React, { useState, useEffect } from "react";
@@ -30,7 +31,7 @@ const MenuUserPassWord = styled.div`
     background-color: #ebb576;
     }
 
-    ${( props ) =>
+    ${ ( props ) =>
         props.active &&
         css`
         background-color: #ebb576;
@@ -42,7 +43,10 @@ function Password ()
     const [ changePasswordForm ] = Form.useForm();
     const { userInfo, changePasswordData } = useSelector( ( state ) => state.auth );
     const dispatch = useDispatch();
-    
+    const navigate = useNavigate()
+
+
+
 
     useEffect( () =>
     {
@@ -68,7 +72,9 @@ function Password ()
                     newPassword: values.newPassword,
                 },
                 callback: () => changePasswordForm.resetFields(),
-            } )
+            } ),
+            // dispatch( loguotAction() ),
+            // navigate("/login")
         );
     };
 
@@ -105,7 +111,7 @@ function Password ()
                                 </MenuUserPassWord>
                             </Link>
                             <Link to={ "/PassWord" }>
-                                <MenuUserPassWord active={ pathname === "/PassWord"}>
+                                <MenuUserPassWord active={ pathname === "/PassWord" }>
                                     <div className='bgrIcon2'>
                                         <BsKeyFill />
                                     </div>
@@ -129,7 +135,7 @@ function Password ()
                                     rules={ [
                                         {
                                             required: true,
-                                            message: "Nhập lại mật khẩu",
+                                            message: "Vui lòng nhập mật khẩu cũ!",
                                         }
                                         ,
                                         {

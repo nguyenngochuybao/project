@@ -80,7 +80,6 @@ const orderSlice = createSlice( {
       }
     }
   },
-
 } );
 
 export const { addProduct, removeProduct,removeAllProducts, updateCartItem } = orderSlice.actions;

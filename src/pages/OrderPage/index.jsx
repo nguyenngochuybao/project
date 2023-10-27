@@ -2,23 +2,47 @@ import './style.css';
 import { CiCircleRemove } from "react-icons/ci";
 import { useSelector, useDispatch } from "react-redux";
 import React, { useState, useEffect } from "react";
-import { removeProduct, updateCartItem } from '../../redux/orderSlice';
+import { removeProduct, updateCartItem, removeAllProducts } from '../../redux/orderSlice';
 import { Form, Input, Space, Button, Divider, Typography } from "antd"
+import { Link, Navigate, useNavigate } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
 
 
 
 
 function OrderPage ()
 {
-
+    const navigate = useNavigate()
     const { TextArea } = Input;
 
     const dispatch = useDispatch();
     const { cartList } = useSelector( ( state ) => state.order );
 
-    const handleRemove = ( product ) =>
+    const handleNavigate = () =>
+    { 
+        toast.success( 'Đặt hàng thành công', {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+        }
+        )
+        navigate("/")
+            
+    }
+
+    const handleRemoveAll = () =>
     {
-        dispatch( removeProduct( { id: product.id } ) );
+        dispatch(
+            removeAllProducts(
+                {},
+                handleNavigate()
+            ),
+        );;
     };
 
     const total = cartList?.reduce( ( acc, product ) =>
@@ -44,6 +68,7 @@ function OrderPage ()
                             <th>&nbsp;</th>
                             <th>&nbsp;</th>
                             <th className="order_sanpham">SẢN PHẨM</th>
+                            <th>GHI CHÚ</th>
                             <th>GIÁ</th>
                             <th>SỐ LƯỢNG</th>
                             <th>TỔNG CỘNG</th>
@@ -58,6 +83,10 @@ function OrderPage ()
                                 </td>
 
                                 <td className="order_product_item">{ product.name }</td>
+                                <td className='attention'>
+                                    <div className="spicy"><p>{ product.spicy }</p></div>
+                                    <div className="vegetable"><p>{ product.vegetable }</p></div>
+                                </td>
                                 <td className="order_product_price">{ product.price.toLocaleString() } VNĐ</td>
                                 <td className="order_product_quality">
                                     <tr className="up_down">
@@ -74,7 +103,11 @@ function OrderPage ()
                         <h2 className='title-h2'>
                             THÔNG TIN NGƯỜI MUA
                         </h2>
-                        <Form className="form_order" layout="vertical">
+                        <Form
+                            className="form_order"
+                            layout="vertical"
+                            onFinish={ () => handleRemoveAll() }
+                        >
                             <Space size={ 10 }>
                                 <Form.Item
                                     label="Họ và tên"
@@ -161,6 +194,7 @@ function OrderPage ()
                             <button className='thanh_toan_ngay'>
                                 THANH TOÁN NGAY
                             </button>
+                            <ToastContainer />
                         </Form>
                     </div>
                 </div>

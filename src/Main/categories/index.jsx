@@ -1,6 +1,7 @@
 import './style.css'
 import FeaturedProducts from './FeaturedProducts';
 import LatestProducts from './LatestProducts';
+import AllProducts from './AllProduct';
 
 import banhMy1 from '../../images/27-620x620-4.jpg'
 import banhMy2 from '../../images/huong-dan-lam-banh-mi-thit-nuong-1.jpg'
@@ -20,8 +21,9 @@ function Categories() {
                         <img src={banhMy3}/>
                     </div>
                 </div>
-                <FeaturedProducts />
-                <LatestProducts/>
+                {/* <FeaturedProducts />
+                <LatestProducts/> */}
+                <AllProducts/>
             </div>
         </>
   );

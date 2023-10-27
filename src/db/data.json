@@ -2,10 +2,10 @@
   "users": [
     {
       "email": "123@gmail.com",
-      "password": "$2a$10$AxTjvjfRufS4q.ZkM4/hkec8GymujNYTMbmJpZDEmOuJo7tLto50a",
-      "user": "Nguyễn ",
+      "password": "$2a$10$TOo0Gb9uGXQKmJkbwq1KneAdaV/URSGN4FZOVPrthsOqVuUtajV3K",
+      "user": "nguyễn ngọc huy bảo",
       "createdAt": 1695215513301,
-      "updatedAt": 1696412891554,
+      "updatedAt": 1698305603281,
       "id": 1
     },
     {
@@ -39,6 +39,14 @@
       "createdAt": 1696340634063,
       "updatedAt": 1696344138351,
       "id": 5
+    },
+    {
+      "email": "baokx123@gmail.com",
+      "password": "$2a$10$LFHHceCIl5fzZ5lTD5Q5.eJcBQxiK14ys7a.3IabOa/bGcS47SRGK",
+      "user": "baobao123",
+      "createdAt": 1697232973375,
+      "updatedAt": 1697233088527,
+      "id": 6
     }
   ],
   "products": [
@@ -48,11 +56,7 @@
       "price": 15000,
       "image": "https://img-global.cpcdn.com/recipes/01914f4be6cc4786/680x482cq70/banh-mi-vi%E1%BB%87t-nam-k%E1%BA%B9p-tr%E1%BB%A9ng-%E1%BB%91p-la-recipe-main-photo.jpg",
       "content": "Bánh mì ốp la là một món ăn ngon và phổ biến, với lớp vỏ giòn bên ngoài và lòng đỏ trứng mềm mịn bên trong. Bánh mì thường có hình vuông hoặc hình chữ nhật và thường được chiên trên một lớp dầu nóng cho đến khi mặt ngoài nâu giòn. Khi bạn cắt ra, lòng trứng chảy ra và tạo nên một trải nghiệm ngon miệng. Bánh mì ốp la thường được ăn kèm với nhiều loại gia vị và sốt để tạo thêm hương vị.",
-      "quantity": 1,
-      "toping": {
-        "toping1": 15000,
-        "toping2": 20000
-      }
+      "quantity": 1
     },
     {
       "id": 2,
@@ -60,11 +64,7 @@
       "price": 16000,
       "image": "https://xebanhmithonhiky.com.vn/wp-content/uploads/2022/03/thanh-pham.jpg",
       "content": "Bánh mì chả cá là một món ăn truyền thống với nguồn gốc từ nhiều nền văn hóa khác nhau. Món này thường bao gồm một lớp chả cá được làm từ cá tươi ngon đã được xay nhuyễn hoặc cắt nhỏ, sau đó trộn với các loại gia vị và thảo dược. Chả cá này thường được đặt lên lớp vỏ bánh mì mềm mịn, tạo nên một kết hợp hương vị độc đáo.",
-      "quantity": 1,
-      "toping": {
-        "toping1": 16000,
-        "toping2": 24000
-      }
+      "quantity": 1
     },
     {
       "id": 3,
@@ -72,11 +72,7 @@
       "price": 16000,
       "image": "https://yummyday.vn/uploads/images/banh-mi-cha-2.jpg",
       "content": "Bánh mì thịt chả là một món ăn truyền thống có nguồn gốc từ nhiều quốc gia khác nhau, như Việt Nam, Thái Lan, Lào, và nhiều nơi khác. Món này bao gồm một lớp thịt chả, đó là một loại hỗn hợp thịt (thường là thịt lợn hoặc thịt gà) đã được nghiền nhỏ hoặc xay nhuyễn, sau đó được chế biến với các loại gia vị như tỏi, gia vị, và nước mắm để tạo ra một hương vị độc đáo và thơm ngon.",
-      "quantity": 1,
-      "toping": {
-        "toping1": 16000,
-        "toping2": 24000
-      }
+      "quantity": 1
     },
     {
       "id": 4,
@@ -84,11 +80,7 @@
       "price": 18000,
       "image": "https://cdn.tgdd.vn/2021/05/CookRecipe/Avatar/banh-mi-thit-bo-nuong-thumbnail-1.jpg",
       "content": "Bánh mì thịt nướng là một món ăn ngon và phổ biến, bao gồm một lớp thịt nướng thơm ngon được đặt trong lớp vỏ bánh mì mềm mịn. Thịt nướng thường được làm từ các miếng thịt (thường là thịt lợn hoặc thịt gà) được ướp với một hỗn hợp gia vị đặc biệt, bao gồm tỏi, gia vị, dầu ăn, và nhiều loại sốt khác tùy theo sở thích cá nhân.",
-      "quantity": 1,
-      "toping": {
-        "toping1": 18000,
-        "toping2": 26000
-      }
+      "quantity": 1
     },
     {
       "id": 5,
@@ -96,11 +88,7 @@
       "price": 15000,
       "image": "https://image.cooky.vn/recipe/g6/54200/s/6330b4fb-e619-46c7-af88-73f12416712d.jpeg",
       "content": "Bánh mì gà xé bao gồm một lớp nhân gà xé thơm ngon được đặt trong lớp vỏ bánh mì mềm mịn. Nhân gà xé thường được làm từ thịt gà (thường là thịt ức gà) đã được xé nhỏ hoặc nấu chín, sau đó được gia vị hóa với các loại gia vị như tỏi, hành, gia vị, và nhiều loại sốt tùy theo sở thích cá nhân.",
-      "quantity": 1,
-      "toping": {
-        "toping1": 15000,
-        "toping2": 20000
-      }
+      "quantity": 1
     },
     {
       "id": 6,
@@ -108,11 +96,7 @@
       "price": 14000,
       "image": "https://img-global.cpcdn.com/recipes/30b7774993b7fabd/680x482cq70/banh-mi-k%E1%BA%B9p-b%E1%BB%99t-l%E1%BB%8Dc-recipe-main-photo.jpg",
       "content": "Bánh mì bọt lọt thường có hình dạng giống một ống dài, trông giống một lọt nước hoặc bọt nước, từ đó có tên gọi bánh mì bọt lọt. Vỏ bánh mì thường mềm mịn và có lớp vỏ ngoài mỏng và giòn. Bánh mì này thường được làm từ bột mỳ, men nở và nước.",
-      "quantity": 1,
-      "toping": {
-        "toping1": 14000,
-        "toping2": 18000
-      }
+      "quantity": 1
     },
     {
       "id": 7,
@@ -120,11 +104,7 @@
       "price": 16000,
       "image": "https://yummyday.vn/uploads/images/cach-lam-xiu-mai-an-banh-mi.jpg",
       "content": "Bánh mì xíu mại thường bao gồm một chiếc bánh mì mềm mịn, tương tự như bánh mì baguette, được cắt ra từng miếng nhỏ. Lớp nhân chính của bánh mì xíu mại thường là xíu mại. Xíu mại là một loại hình thức thịt viên hoặc bánh xíu mại có nguồn gốc từ Đông Á, chế biến từ thịt (thường là thịt lợn hoặc thịt gà) đã được xay nhuyễn hoặc nghiền nhỏ. Thịt được kết hợp với các loại gia vị như tỏi, hành, gia vị, và nhiều loại sốt tùy theo sở thích.",
-      "quantity": 1,
-      "toping": {
-        "toping1": 16000,
-        "toping2": 22000
-      }
+      "quantity": 1
     },
     {
       "id": 8,
@@ -132,11 +112,7 @@
       "price": 12000,
       "image": "https://monngonmoingay.com/wp-content/uploads/2020/09/banh-mi-que-xot-thit-cay-mayo-500.jpg",
       "content": "Bánh mì que thường là một loại bánh mì mini, thường có hình dạng tròn hoặc dài nhỏ, tương tự như que. Vỏ bánh mì que thường mềm mịn và có lớp vỏ ngoài giòn, màu vàng nâu.Bánh mì que này thường được làm từ bột mỳ và men nở, sau đó nướng trong lò để tạo ra lớp vỏ giòn. Khi bánh đã nướng chín, chúng thường được tán nhẹ để làm bong các khoảng trống bên trong, tạo ra một vẻ bề mặt độc đáo giống như que.",
-      "quantity": 1,
-      "toping": {
-        "toping1": 12000,
-        "toping2": 16000
-      }
+      "quantity": 1
     }
   ],
   "featuredProducts": [
